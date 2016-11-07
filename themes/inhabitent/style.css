@@ -705,6 +705,7 @@ body {
   background-color: #ffffff;
   font-family: "merriweather", sans-serif;
   font-size: 16px;
+  line-height: 1.75rem;
   color: #404040; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -756,8 +757,10 @@ h1, h2, h3, h4, h5, h6 {
   -ms-flex-direction: row;
       flex-direction: row;
   -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+  padding-top: 3rem; }
   .footer-columns h3 {
+    font-weight: bold;
     color: #d99054; }
 
 .contact-info {
@@ -768,6 +771,8 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffffff; }
   .contact-info a:hover {
     text-decoration: underline; }
+  .contact-info i {
+    padding-right: 0.5rem; }
 
 .business-hours {
   width: 25%; }

@@ -23,13 +23,13 @@
 						</p>
 						<p>
 							<span>
-								<i class="fa fa-facebook-square" aria-hidden="true"></i>
+								<a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
 							</span>
 							<span>
-								<i class="fa fa-twitter-square" aria-hidden="true"></i>
+								<a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
 							</span>
 							<span>
-								<i class="fa fa-google-plus-square" aria-hidden="true"></i>
+								<a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
 							</span>
 						</p>
 					</div>
