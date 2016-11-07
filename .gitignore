@@ -17,6 +17,7 @@ themes/*
 
 # Ignore packages #
 themes/inhabitent/node_modules/
+themes/inhabitent/project-04/
 
 .idea
 .vscode

@@ -7,7 +7,7 @@ $background-colour: #ffffff;
 $font-base-colour: #404040;
 $font-base-size: 16px;
 $font-base-line-height: 1.75rem;
-$font-base-spacing: 1.5rem;
+$font-base-spacing: 0.25rem;
 
 $font-family-base: 'merriweather', sans-serif;
 $font-family-heading: 'novecento_sans_wide', sans-serif;;
@@ -40,13 +40,13 @@ body {
   font-family: $font-family-base;
   font-size: $font-base-size;
   line-height: $font-base-line-height;
-  //word-spacing: $font-base-spacing;
   color: $font-base-colour;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-family-heading;
   text-transform: uppercase;
+  letter-spacing: $font-base-spacing;
 }
 
 .container {
