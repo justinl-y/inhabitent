@@ -57,6 +57,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
+/*header styles*/
 .site-header {
   border-bottom: $border-solid;
 }
@@ -88,6 +89,17 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 1.5rem;
   }
 }
+
+/*home page styles*/
+.home-banner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 7.5rem;
+  background: url('../../images/home-hero.jpg') top center no-repeat;
+  background-size: cover;
+}
+
 
 /*footer styles*/
 .site-footer {
