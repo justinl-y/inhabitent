@@ -1,5 +1,149 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+$main-width: 1120px;
+
+$background-colour: #ffffff;
+$font-base-colour: #404040;
+$font-base-size: 16px;
+$font-base-lie-height: 1.75;
+
+$font-family-base: 'merriweather', sans-serif;
+$font-family-heading: 'novecento_sans_wide', sans-serif;;
+
+$font-brand-colour-green: #248A83;
+$font-brand-colour-purple: #2f1339;
+$font-brand-colour-orange: #d99054;
+$font-brand-colour-yellow: #f0e4d1;
+$font-brand-colour-grey-light: #a1a1a1;
+$font-brand-colour-grey-dark: #808080;
+
+$border-solid: 1px solid #e1e1e1;
+$border-dashed: 1px dashed #c8c8c8;
 
 /* Front page */
+* {
+  //margin: 0;
+  //padding: 0;
+  //box-sizing: border-box;
+}
+
+
+html, body {
+  //width: $main-width;
+}
+
+body {
+  margin: 0 auto;
+  background-color: $background-colour;
+  font-family: $font-family-base;
+  font-size: $font-base-size;
+  color: $font-base-colour;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  text-transform: uppercase;
+}
+
+.container {
+  width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header {
+  border-bottom: $border-solid;
+}
+
+.logo {
+  height: auto;
+  width: 55px;
+}
+
+.main-navigation {
+  width: 50%;
+}
+
+.main-menu-navigation-container {
+  display: flex;
+  justify-content: flex-end;
+  font-family: $font-family-heading;
+  text-transform: uppercase;
+
+  a:link, a:visited {
+    color: $font-brand-colour-green;
+  }
+
+  a:hover {
+    color: $font-brand-colour-purple;
+  }
+
+  li {
+    padding-left: 1.5rem;
+  }
+}
+
+/*footer styles*/
+.site-footer {
+  background: url('../../images/dark-wood.png') repeat;
+  color: $background-colour;
+}
+
+.footer-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  //padding: 2rem auto;
+
+  h3 {
+    color: $font-brand-colour-orange;
+  }
+}
+
+.contact-info {
+  width: 25%;
+
+  a {
+    text-decoration: none;
+  }
+
+  a:link, a:visited {
+    color: $background-colour;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.business-hours {
+  width: 25%;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-start;
+  width: 50%;
+
+  a {
+    height: 50px;
+    width: auto;
+  }
+}
+
+.citation {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: $font-family-heading;
+  text-transform: uppercase;
+}

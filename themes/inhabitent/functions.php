@@ -8,34 +8,35 @@
  */
 
 if ( ! function_exists( 'red_starter_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- */
-function red_starter_setup() {
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 */
+	function red_starter_setup() {
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
 
-	// Let WordPress manage the document title.
-	add_theme_support( 'title-tag' );
+		// Let WordPress manage the document title.
+		add_theme_support( 'title-tag' );
 
-	// Enable support for Post Thumbnails on posts and pages.
-	add_theme_support( 'post-thumbnails' );
+		// Enable support for Post Thumbnails on posts and pages.
+		add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html( 'Primary Menu' ),
-	) );
+		// This theme uses wp_nav_menu() in one location.
+		register_nav_menus( array(
+				'primary' => esc_html( 'Primary Menu' ),
+			)
+		);
 
-	// Switch search form, comment form, and comments to output valid HTML5.
-	add_theme_support( 'html5', array(
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	) );
-
-}
+		// Switch search form, comment form, and comments to output valid HTML5.
+		add_theme_support( 'html5', array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+			)
+		);
+	}
 endif; // red_starter_setup
 add_action( 'after_setup_theme', 'red_starter_setup' );
 
@@ -74,7 +75,6 @@ function red_starter_minified_css( $stylesheet_uri, $stylesheet_dir_uri ) {
 	if ( file_exists( get_template_directory() . '/build/css/style.min.css' ) ) {
 		$stylesheet_uri = $stylesheet_dir_uri . '/build/css/style.min.css';
 	}
-
 	return $stylesheet_uri;
 }
 add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
@@ -83,10 +83,14 @@ add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function red_starter_scripts() {
-    wp_enqueue_style( 'font-awesome-style', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
-
+	//css
+	wp_enqueue_style( 'font-awesome-style', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
 	wp_enqueue_style( 'red-starter-style', get_stylesheet_uri() );
 
+	//js
+	wp_enqueue_style( 'jquery' );
+
+	//other stuff
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

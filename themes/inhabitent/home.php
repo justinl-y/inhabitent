@@ -5,7 +5,7 @@
  * @package RED_Starter_Theme
  */
 
-get_header(); ?>
+get_header('main'); ?>
 
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
@@ -37,4 +37,4 @@ get_header(); ?>
     </div><!-- #primary -->
 
 <?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php get_footer('main'); ?>
