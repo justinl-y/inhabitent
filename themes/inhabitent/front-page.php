@@ -14,6 +14,25 @@ get_header('main'); ?>
     </section>
 
     <div class="container">
+        <section class="home-shop">
+            <h2>Shop Stuff</h2>
+        </section>
+
+        <section class="home-journal">
+            <h2>Inhabitent Journal</h2>
+        </section>
+
+        <section class="home-adventures">
+            <h2>Latest Adventures</h2>
+
+
+
+            <div class="home-adventures-beach-bonfire"></div>
+            <div class="home-adventures-canoe-girl"></div>
+            <div class="home-adventures-mountain-hikers"></div>
+            <div class="home-adventures-night-sky"></div>
+
+        </section>
 
     </div>
 

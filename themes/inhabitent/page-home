@@ -1,1 +1,17 @@
 <?php echo 'page_home.php';
+
+<div class="home-adventures-column-left">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/adventure-photos/canoe-girl.jpg" alt="Image of girl in a canoe" />
+</div>
+
+<div class="home-adventures-column-right">
+    <div class="home-adventures-column-right-top">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/adventure-photos/beach-bonfire.jpg" alt="Image of people on a beach at night" />
+    </div>
+    <div class="home-adventures-column-right-bottom">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/adventure-photos/mountain-hikers.jpg" alt="Image of hikers on a mountain" />
+    </div>
+    <div class="home-adventures-column-right-bottom">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/adventure-photos/night-sky.jpg" alt="Image of the night sky" />
+    </div>
+</div>

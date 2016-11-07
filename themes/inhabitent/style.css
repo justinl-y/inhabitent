@@ -699,7 +699,10 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-/* Front page */
+/*** Front page ***/
+* {
+  box-sizing: border-box; }
+
 body {
   margin: 0 auto;
   background-color: #ffffff;
@@ -715,7 +718,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .container {
   width: 1120px;
-  margin: 0 auto;
+  margin: 0 auto; }
+
+/*header styles*/
+.header-items {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -723,7 +729,6 @@ h1, h2, h3, h4, h5, h6 {
   -ms-flex-align: center;
       align-items: center; }
 
-/*header styles*/
 .site-header {
   border-bottom: 1px solid #e1e1e1; }
 
@@ -748,7 +753,7 @@ h1, h2, h3, h4, h5, h6 {
   .main-menu-navigation-container li {
     padding-left: 1.5rem; }
 
-/*home page styles*/
+/*** home page styles ***/
 .home-banner {
   display: -ms-flexbox;
   display: flex;
@@ -758,6 +763,22 @@ h1, h2, h3, h4, h5, h6 {
   padding: 7.5rem;
   background: url("../../images/home-hero.jpg") top center no-repeat;
   background-size: cover; }
+
+.home-adventures {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.home-adventures-column-left {
+  width: 50%;
+  height: auto; }
+
+.home-adventures-column-right {
+  width: 50%;
+  height: auto; }
 
 /*footer styles*/
 .site-footer {

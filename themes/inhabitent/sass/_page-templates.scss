@@ -22,11 +22,11 @@ $font-brand-colour-grey-dark: #808080;
 $border-solid: 1px solid #e1e1e1;
 $border-dashed: 1px dashed #c8c8c8;
 
-/* Front page */
+/*** Front page ***/
 * {
   //margin: 0;
   //padding: 0;
-  //box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 
@@ -52,12 +52,15 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   width: 1120px;
   margin: 0 auto;
+}
+
+/*header styles*/
+.header-items {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/*header styles*/
 .site-header {
   border-bottom: $border-solid;
 }
@@ -90,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/*home page styles*/
+/*** home page styles ***/
 .home-banner {
   display: flex;
   justify-content: center;
@@ -98,6 +101,22 @@ h1, h2, h3, h4, h5, h6 {
   padding: 7.5rem;
   background: url('../../images/home-hero.jpg') top center no-repeat;
   background-size: cover;
+}
+
+.home-adventures {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.home-adventures-column-left {
+  width: 50%;
+  height: auto;
+}
+
+.home-adventures-column-right {
+  width: 50%;
+  height: auto;
 }
 
 
