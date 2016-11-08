@@ -99,6 +99,28 @@ function red_starter_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
 
+/**
+ * Change backend UI login logo
+ */
+function inhabitent_login_logo() { ?>
+	<style type="text/css">
+		#login h1 a, .login h1 a {
+			background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logos/inhabitent-logo-tent.svg);
+
+		}
+	</style>
+<?php }
+add_action( 'login_enqueue_scripts', 'inhabitent_login_logo' );
+
+function my_login_logo_url() {
+	return home_url();
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+function my_login_logo_url_title() {
+	return 'Inhabitent';
+}
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
 /**
  * Custom template tags for this theme.
@@ -109,3 +131,4 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+

@@ -111,10 +111,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .home-adventures-column-left {
+  position: relative;
   width: 50%;
 }
 
 .home-adventures-column-right {
+
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -123,39 +126,168 @@ h1, h2, h3, h4, h5, h6 {
 
 .home-adventures-canoe-girl {
   width: 100%;
-  padding-top: 50%;
-  padding-bottom: 50%;
+  //padding-top: 50%;
+  //padding-bottom: 50%;
+  height: 100%;
 
-  background: url('../../images/adventure-photos/canoe-girl.jpg') center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../../images/adventure-photos/canoe-girl.jpg') center center no-repeat;
   background-size: cover;
+  border-right: 20px solid $background-colour;
 }
 
 .home-adventures-beach-bonfire {
+  position: relative;
+
   width: 100%;
   padding-top: 25%;
   padding-bottom: 25%;
+  //height: 50%;
 
-  background: url('../../images/adventure-photos/beach-bonfire.jpg') center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../../images/adventure-photos/beach-bonfire.jpg') center center no-repeat;
   background-size: cover;
+  border-bottom: 20px solid $background-colour;
 }
 
 .home-adventures-mountain-hikers {
+  position: relative;
+
   width: 50%;
   padding-top: 25%;
   padding-bottom: 25%;
+  //height: 50%;
 
-  background: url('../../images/adventure-photos/mountain-hikers.jpg') center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../../images/adventure-photos/mountain-hikers.jpg') center center no-repeat;
   background-size: cover;
+  border-right: 10px solid $background-colour;
 }
 
 .home-adventures-night-sky {
+  position: relative;
+
   width: 50%;
   padding-top: 25%;
   padding-bottom: 25%;
+  //height: 50%;
 
-  background: url('../../images/adventure-photos/night-sky.jpg') center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../../images/adventure-photos/night-sky.jpg') center center no-repeat;
   background-size: cover;
+  border-left: 10px solid $background-colour;
 }
+
+.home-adventures-image-text {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: translate(-10%, -10%);
+
+  color: white;
+}
+
+
+//Latest Adventures
+.latest-adventures {
+  line-height: 1.2;
+
+  h2{
+    text-align: center;
+    text-transform: uppercase;
+
+  }
+
+}
+.front-page-h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.adventures-container {
+
+  display:flex;
+  flex-flow: row nowrap;
+  //margin: 0 8rem;
+  height: 500px;
+
+
+  .static-read-more {
+    border: 1px solid;
+    color: white;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    margin-left: 1rem;
+  }
+  p {
+    display: block;
+    color: white;
+    margin-left: 1rem;
+    letter-spacing: 2px;
+    font-size: 32px;
+
+  }
+
+}
+.leftside-adventures {
+  background:
+          linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+          url('../../images/adventure-photos/canoe-girl.jpg');
+  background-size: cover;
+  height: 100%;
+  flex: 1 0 50%;
+  margin-right: 1rem;
+}
+
+.rightside-adventures {
+  height: 100%;
+  flex: 1 0 46%;
+  //flex: 1 0 50%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.rightside-top-adventure {
+  background:
+          linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+          url('../../images/adventure-photos/beach-bonfire.jpg');
+  background-size: cover;
+  flex: 1 0 100%;
+  max-height: 230px;
+  padding-bottom: 1rem;
+}
+
+.bottom-left-rightside-adventure {
+  background:
+          linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+          url('../../images/adventure-photos/mountain-hikers.jpg');
+  background-size: cover;
+  flex: 1 0 46%;
+  //flex: 1 0 50%;
+  margin-right: 1rem;
+  max-height: 275px;
+  margin-top: 1rem;
+}
+
+.bottom-right-rightside-adventure {
+  background:
+          linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+          url('../../images/adventure-photos/night-sky.jpg');
+  background-size: cover;
+  flex: 1 0 50%;
+  max-height: 275px;
+  margin-top: 1rem;
+}
+
+.more-adventures {
+  display: inline-block;
+  border: 1px solid #e1e1e1;
+  background: $font-brand-colour-green;
+  color: white;
+  margin-left: 8rem;
+  text-transform: uppercase;
+  padding: .5rem 1rem;
+
+  &:hover {
+    background-color: #19625d;
+  }
+}
+
 
 
 

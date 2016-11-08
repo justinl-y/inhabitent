@@ -26,27 +26,52 @@ get_header('main'); ?>
             <h2>Latest Adventures</h2>
 
             <div class="home-adventures-images">
-
                 <div class="home-adventures-column-left">
                     <div class="home-adventures-canoe-girl">
-                        <span>Getting Back to Nature in a Canoe</span>
+                        <span class="home-adventures-image-text">Getting Back to Nature in a Canoe</span>
                     </div>
                 </div>
 
                 <div class="home-adventures-column-right">
                     <div class="home-adventures-beach-bonfire">
-                        <span>A Night with Friends at the Beach</span>
+                        <span class="home-adventures-image-text">A Night with Friends at the Beach</span>
                     </div>
 
                     <div class="home-adventures-mountain-hikers">
-                        <span>Taking in the View at Big Mountain</span>
+                        <span class="home-adventures-image-text">Taking in the View at Big Mountain</span>
                     </div>
 
                     <div class="home-adventures-night-sky">
-                        <span>Star-Gazing at the Night Sky</span>
+                        <span class="home-adventures-image-text">Star-Gazing at the Night Sky</span>
                     </div>
                 </div>
+            </div>
 
+            <div class="latest-adventures">
+                <h2 class="front-page-h2">Latest Adventures</h2>
+
+                <div class="adventures-container">
+                    <div class="leftside-adventures">
+                        <p>Getting Back to Nature in a Canoe</p>
+                        <span class="static-read-more">Read More</span>
+                    </div>
+
+                    <div class="rightside-adventures">
+                        <div class="rightside-top-adventure">
+                            <p>A Night with Friends at the Beach</p>
+                            <span class="static-read-more">Read More</span>
+                        </div>
+                        <div class="bottom-left-rightside-adventure">
+                            <p>Taking in the View at Big Mountain</p>
+                            <span class="static-read-more">Read More</span>
+                        </div>
+                        <div class="bottom-right-rightside-adventure">
+                            <p>Star-Gazing at the Night Sky</p>
+                            <span class="static-read-more">Read More</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="more-adventures"> More Adventures</p>
             </div>
 
         </section>
