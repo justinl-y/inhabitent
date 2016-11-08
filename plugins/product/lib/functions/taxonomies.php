@@ -5,7 +5,7 @@
  * @link  http://codex.wordpress.org/Function_Reference/register_taxonomy
  */
 
-// Register Product Type Taxonomy
+// Register Custom Taxonomy
 function register_product_type_taxonomy() {
 
 	$labels = array(
@@ -39,7 +39,7 @@ function register_product_type_taxonomy() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'product_type', array( 'post' ), $args );
+	register_taxonomy( 'product_type', array( 'product' ), $args );
 
 }
 add_action( 'init', 'register_product_type_taxonomy', 0 );

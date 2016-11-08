@@ -764,21 +764,51 @@ h1, h2, h3, h4, h5, h6 {
   background: url("../../images/home-hero.jpg") top center no-repeat;
   background-size: cover; }
 
-.home-adventures {
+.home-adventures-images {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row; }
+
+.home-adventures-column-left {
+  width: 50%; }
+
+.home-adventures-column-right {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
       flex-direction: row;
-  -ms-flex-pack: center;
-      justify-content: center; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 50%; }
 
-.home-adventures-column-left {
-  width: 50%;
-  height: auto; }
+.home-adventures-canoe-girl {
+  width: 100%;
+  padding-top: 50%;
+  padding-bottom: 50%;
+  background: url("../../images/adventure-photos/canoe-girl.jpg") center center no-repeat;
+  background-size: cover; }
 
-.home-adventures-column-right {
+.home-adventures-beach-bonfire {
+  width: 100%;
+  padding-top: 25%;
+  padding-bottom: 25%;
+  background: url("../../images/adventure-photos/beach-bonfire.jpg") center center no-repeat;
+  background-size: cover; }
+
+.home-adventures-mountain-hikers {
   width: 50%;
-  height: auto; }
+  padding-top: 25%;
+  padding-bottom: 25%;
+  background: url("../../images/adventure-photos/mountain-hikers.jpg") center center no-repeat;
+  background-size: cover; }
+
+.home-adventures-night-sky {
+  width: 50%;
+  padding-top: 25%;
+  padding-bottom: 25%;
+  background: url("../../images/adventure-photos/night-sky.jpg") center center no-repeat;
+  background-size: cover; }
 
 /*footer styles*/
 .site-footer {

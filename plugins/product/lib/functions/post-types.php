@@ -5,7 +5,7 @@
  * @link  http://codex.wordpress.org/Function_Reference/register_post_type
  */
 
-// Register Product Post Type
+// Register Custom Post Type
 function register_product_post_type() {
 
 	$labels = array(
@@ -39,8 +39,6 @@ function register_product_post_type() {
 		'label'                 => 'Product',
 		'description'           => 'Products that Inhabitent sells',
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields', ),
-		'taxonomies'            => array( 'category' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -55,7 +53,7 @@ function register_product_post_type() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'post',
 	);
-	register_post_type( 'product_type', $args );
+	register_post_type( 'product', $args );
 
 }
 add_action( 'init', 'register_product_post_type', 0 );

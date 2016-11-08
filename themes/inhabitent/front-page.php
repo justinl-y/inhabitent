@@ -25,15 +25,31 @@ get_header('main'); ?>
         <section class="home-adventures">
             <h2>Latest Adventures</h2>
 
+            <div class="home-adventures-images">
 
+                <div class="home-adventures-column-left">
+                    <div class="home-adventures-canoe-girl">
+                        <span>Getting Back to Nature in a Canoe</span>
+                    </div>
+                </div>
 
-            <div class="home-adventures-beach-bonfire"></div>
-            <div class="home-adventures-canoe-girl"></div>
-            <div class="home-adventures-mountain-hikers"></div>
-            <div class="home-adventures-night-sky"></div>
+                <div class="home-adventures-column-right">
+                    <div class="home-adventures-beach-bonfire">
+                        <span>A Night with Friends at the Beach</span>
+                    </div>
+
+                    <div class="home-adventures-mountain-hikers">
+                        <span>Taking in the View at Big Mountain</span>
+                    </div>
+
+                    <div class="home-adventures-night-sky">
+                        <span>Star-Gazing at the Night Sky</span>
+                    </div>
+                </div>
+
+            </div>
 
         </section>
-
     </div>
 
 <?php get_footer('main'); ?>

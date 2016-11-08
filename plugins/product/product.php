@@ -4,7 +4,7 @@
  * @package   Inhabitent Functionality
  * @author    JLY <bob@bob.com>
  * @license   GPL-2.0+
- * @copyright 2015 JLY
+ * @copyright 2015 Inhabitent
  *
  * @wordpress-plugin
  * Plugin Name: Inhabitent Functionality
