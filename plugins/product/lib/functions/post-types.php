@@ -39,6 +39,7 @@ function register_product_post_type() {
 		'label'                 => 'Product',
 		'description'           => 'Products that Inhabitent sells',
 		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail', ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,

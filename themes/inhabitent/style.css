@@ -754,15 +754,14 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 1.5rem; }
 
 /*** home page styles ***/
-.home-banner {
+.home-hero {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
-  width: 100%;
   padding: 7.5rem;
-  background: url("../../images/home-hero.jpg") top center no-repeat;
-  background-size: cover; }
+  background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url("../../images/home-hero.jpg") top center no-repeat;
+  background-size: cover, cover; }
 
 .home-adventures-images {
   display: -ms-flexbox;
@@ -786,8 +785,8 @@ h1, h2, h3, h4, h5, h6 {
 .home-adventures-canoe-girl {
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../../images/adventure-photos/canoe-girl.jpg") center center no-repeat;
-  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url("../../images/adventure-photos/canoe-girl.jpg") center center no-repeat;
+  background-size: cover, cover;
   border-right: 20px solid #ffffff; }
 
 .home-adventures-beach-bonfire {
@@ -795,8 +794,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   padding-top: 25%;
   padding-bottom: 25%;
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../../images/adventure-photos/beach-bonfire.jpg") center center no-repeat;
-  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url("../../images/adventure-photos/beach-bonfire.jpg") center center no-repeat;
+  background-size: cover, cover;
   border-bottom: 20px solid #ffffff; }
 
 .home-adventures-mountain-hikers {
@@ -804,8 +803,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 50%;
   padding-top: 25%;
   padding-bottom: 25%;
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../../images/adventure-photos/mountain-hikers.jpg") center center no-repeat;
-  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url("../../images/adventure-photos/mountain-hikers.jpg") center center no-repeat;
+  background-size: cover, cover;
   border-right: 10px solid #ffffff; }
 
 .home-adventures-night-sky {
@@ -813,8 +812,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 50%;
   padding-top: 25%;
   padding-bottom: 25%;
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../../images/adventure-photos/night-sky.jpg") center center no-repeat;
-  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url("../../images/adventure-photos/night-sky.jpg") center center no-repeat;
+  background-size: cover, cover;
   border-left: 10px solid #ffffff; }
 
 .home-adventures-image-text {

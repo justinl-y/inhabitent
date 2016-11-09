@@ -29,3 +29,39 @@ add_filter( 'body_class', 'red_starter_body_classes' );
      </style>';
 }
 add_action('login_head', 'my_custom_login_logo');*/
+
+
+/* to add custom image */
+/*function my_styles_method() {
+
+	if(!is_page_template('about.php')) {
+		return;
+	}
+
+	$url = CFS()->get( 'about_background_image' );
+	$custom_css = ".about-hero {
+		background-image({$url});
+		}";
+
+	wp_add_inline_style('red-starter-theme', $custom_css);
+}
+add_action( 'wp_enqueue_scripts', 'my_styles_method' );*/
+
+
+function custom_styles_method() {
+
+	if( !is_page_template( 'about.php' ) ){
+		return;
+	}
+
+	$url = CFS()->get( 'about_background_image' );
+	$custom_css = "
+		.about-hero{
+			background: linear-gradient( to bottom, rgba(0,0,0,0.25) 0, rgba(0,0,0,0.25) 100% ), url({$url}) bottom center no-repeat;
+			background-size: cover, cover;
+			height: 50rem;
+		}";
+	wp_add_inline_style( 'red-starter-style', $custom_css );
+}
+add_action( 'wp_enqueue_scripts', 'custom_styles_method' );
+

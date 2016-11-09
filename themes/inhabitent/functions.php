@@ -7,7 +7,7 @@
  * @package RED_Starter_Theme
  */
 
-if ( ! function_exists( 'red_starter_setup' ) ) :
+if (!function_exists( 'red_starter_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 */
@@ -88,7 +88,7 @@ function red_starter_scripts() {
 	wp_enqueue_style( 'red-starter-style', get_stylesheet_uri() );
 
 	//js
-	wp_enqueue_style( 'jquery' );
+	wp_enqueue_script( 'jquery' );
 
 	//other stuff
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
@@ -105,7 +105,7 @@ add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
 function inhabitent_login_logo() { ?>
 	<style type="text/css">
 		#login h1 a, .login h1 a {
-			background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logos/inhabitent-logo-tent.svg);
+			background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logos/inhabitent-logo-text-dark.svg);
 
 		}
 	</style>
@@ -131,4 +131,5 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
 
