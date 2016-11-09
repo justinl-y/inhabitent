@@ -12,6 +12,13 @@ get_header('main'); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+
+			<section>
+
+
+
+			</section>
+
 			<!--<div class="container">
 				<p>about.php</p>
 				<?php //while ( have_posts() ) : the_post(); ?>

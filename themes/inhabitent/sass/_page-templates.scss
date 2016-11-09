@@ -103,6 +103,80 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover, cover;
 }
 
+/* home journal */
+.inhabitent-journal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inhabitent-journal-block {
+  //display: block;
+  max-width: 32%;
+  border: $border-solid;
+  margin-bottom: 4rem;
+
+  h1 {
+    color: $font-brand-colour-green;
+  }
+
+  .wp-post-image {
+    height: 250px;
+    border-bottom: 5px solid #e1e1e1;
+  }
+
+  a {
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0;
+    font-size: .75rem;
+  }
+
+  .read-entry {
+    display: inline-block;
+    letter-spacing: 0.01rem;
+    font-size: 14px;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid #404040;
+    text-transform: uppercase;
+    color: $font-base-colour;
+
+    &:hover {
+      color: white;
+      background: $font-brand-colour-green;
+    }
+  }
+}
+
+.inhabitent-journal-block-info {
+  min-height: 140px;
+  padding: 0 1rem;
+  line-height: 1;
+  letter-spacing: 2px;
+
+  a {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+
+    &:hover {
+      color: $font-base-colour;
+    }
+  }
+
+  ul {
+    padding: 0;
+    text-align: left;
+  }
+}
+
+
+
+
+/* home adventures */
 .home-adventures-images {
   display: flex;
   flex-direction: row;
@@ -116,8 +190,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .home-adventures-column-right {
-
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

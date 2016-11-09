@@ -16,15 +16,27 @@ get_header('main'); ?>
     <div class="container">
         <section class="home-shop">
             <h2>Shop Stuff</h2>
+
+            <section class="product-feed-container">
+                <?php
+                    $terms = get_terms('product_type');
+
+                    foreach ($terms as $term) : ?>
+                        <?php $url = get_term_link($term->slug, 'product_type'); ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/product-type-icons/<?php echo $term->slug?>.svg">
+
+                        <p><?php echo $term->description ?></p>
+                        <p><a href="<?php echo $url ?>"><?php echo $term->name ?></a></p>
+                    <?php endforeach;
+                ?>
+            </section>
         </section>
 
         <section class="home-journal">
             <h2>Inhabitent Journal</h2>
 
-
-
             <?php
-                $args = array(
+                /*$args = array(
                     'orderby'       =>  'post_date',
                     'order'         =>  'DESC',
                     'posts_per_page' => 3 //5 default
@@ -39,8 +51,29 @@ get_header('main'); ?>
                 <?php the_date(); ?>
                 <?php comments_number(); ?>
 
-            <?php endforeach; wp_reset_postdata(); ?>
+            <?php endforeach; wp_reset_postdata(); */?>
 
+            <div class="inhabitent-journal">
+                <?php
+                    $args = array( 'post_type' => 'post',
+                                   'orderby' => 'post_date',
+                                   'order' => 'DESC',
+                                   'posts_per_page' => 3 );
+
+                    $journal_posts = get_posts( $args );
+                ?>
+                <?php foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
+                    <div class="inhabitent-journal-block">
+                        <div class="inhabitent-journal-block-image"><?php the_post_thumbnail(); ?></div>
+
+                        <div class="inhabitent-journal-block-info">
+                            <p><?php the_date(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?></p>
+                            <a><h1><?php the_title(); ?></h1></a>
+                            <a href="<?php the_permalink(); ?>"><div class="read-entry">read entry</div></a>
+                        </div>
+                    </div>
+                <?php endforeach; wp_reset_postdata(); //use for exiting secondary loop to return to main front-page loop?>
+            </div>
         </section>
 
         <section class="home-adventures">
@@ -68,7 +101,7 @@ get_header('main'); ?>
                 </div>
             </div>
 
-            <div class="latest-adventures">
+            <!--<div class="latest-adventures">
                 <h2 class="front-page-h2">Latest Adventures</h2>
 
                 <div class="adventures-container">
@@ -93,7 +126,7 @@ get_header('main'); ?>
                     </div>
                 </div>
                 <p class="more-adventures"> More Adventures</p>
-            </div>
+            </div>-->
 
         </section>
     </div>

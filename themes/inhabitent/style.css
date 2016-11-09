@@ -763,6 +763,55 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url("../../images/home-hero.jpg") top center no-repeat;
   background-size: cover, cover; }
 
+/* home journal */
+.inhabitent-journal {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+
+.inhabitent-journal-block {
+  max-width: 32%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 4rem; }
+  .inhabitent-journal-block h1 {
+    color: #248A83; }
+  .inhabitent-journal-block .wp-post-image {
+    height: 250px;
+    border-bottom: 5px solid #e1e1e1; }
+  .inhabitent-journal-block a {
+    text-transform: uppercase; }
+  .inhabitent-journal-block p {
+    margin: 0;
+    font-size: .75rem; }
+  .inhabitent-journal-block .read-entry {
+    display: inline-block;
+    letter-spacing: 0.01rem;
+    font-size: 14px;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid #404040;
+    text-transform: uppercase;
+    color: #404040; }
+    .inhabitent-journal-block .read-entry:hover {
+      color: white;
+      background: #248A83; }
+
+.inhabitent-journal-block-info {
+  min-height: 140px;
+  padding: 0 1rem;
+  line-height: 1;
+  letter-spacing: 2px; }
+  .inhabitent-journal-block-info a {
+    font-size: 1rem; }
+  .inhabitent-journal-block-info h1 {
+    font-size: 1.2rem; }
+    .inhabitent-journal-block-info h1:hover {
+      color: #404040; }
+  .inhabitent-journal-block-info ul {
+    padding: 0;
+    text-align: left; }
+
+/* home adventures */
 .home-adventures-images {
   display: -ms-flexbox;
   display: flex;
