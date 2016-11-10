@@ -23,10 +23,10 @@ get_header('main'); ?>
 
                     foreach ($terms as $term) : ?>
                         <?php $url = get_term_link($term->slug, 'product_type'); ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/product-type-icons/<?php echo $term->slug?>.svg">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/product-type-icons/<?php echo $term->slug; ?>.svg">
 
-                        <p><?php echo $term->description ?></p>
-                        <p><a href="<?php echo $url ?>"><?php echo $term->name ?></a></p>
+                        <p><?php echo $term->description; ?></p>
+                        <p><a href="<?php echo $url ?>"><?php echo $term->name; ?></a></p>
                     <?php endforeach;
                 ?>
             </section>
@@ -61,8 +61,8 @@ get_header('main'); ?>
                                    'posts_per_page' => 3 );
 
                     $journal_posts = get_posts( $args );
-                ?>
-                <?php foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
+
+                foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
                     <div class="inhabitent-journal-block">
                         <div class="inhabitent-journal-block-image"><?php the_post_thumbnail(); ?></div>
 
@@ -73,6 +73,7 @@ get_header('main'); ?>
                         </div>
                     </div>
                 <?php endforeach; wp_reset_postdata(); //use for exiting secondary loop to return to main front-page loop?>
+
             </div>
         </section>
 

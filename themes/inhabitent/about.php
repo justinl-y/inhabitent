@@ -11,12 +11,9 @@ get_header('main'); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-
-			<section>
-
-
-
+			<section class="container">
+				<?php echo CFS()->get('our_story') ; ?>
+				<?php echo CFS()->get('our_team') ; ?>
 			</section>
 
 			<!--<div class="container">
@@ -24,7 +21,7 @@ get_header('main'); ?>
 				<?php //while ( have_posts() ) : the_post(); ?>
 					<?php //get_template_part( 'template-parts/content', 'page' ); ?>
 				<?php //endwhile; // End of the loop. ?>
-			</div>
+			</div>-->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -9,6 +9,7 @@ get_header('main'); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
+
 		<div class="container">
 			<p>single-product.php</p>
 
