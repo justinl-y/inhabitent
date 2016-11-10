@@ -45,7 +45,36 @@ add_action('login_head', 'my_custom_login_logo');*/
 
 	wp_add_inline_style('red-starter-theme', $custom_css);
 }
+
+
 add_action( 'wp_enqueue_scripts', 'my_styles_method' );*/
+
+
+/**
+ * Change backend UI login logo
+ */
+function inhabitent_login_logo() { ?>
+	<style type="text/css">
+		#login h1 a, .login h1 a {
+			background-image: url(<?php echo get_template_directory_uri(); ?>/images/logos/inhabitent-logo-text-dark.svg);
+			width:	300px;
+			height: auto;
+			padding-bottom: 30px;
+			background-size: 300px auto;
+		}
+	</style>
+<?php }
+add_action( 'login_enqueue_scripts', 'inhabitent_login_logo' );
+
+function my_login_logo_url() {
+	return home_url();
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+function my_login_logo_url_title() {
+	return 'Inhabitent';
+}
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
 
 /*** set custom hero for about page ***/
@@ -80,5 +109,3 @@ function get_all_product_posts ($query) {
 	}
 }
 add_action( 'pre_get_posts', 'get_all_product_posts' );
-
-//is_tax('product_type')

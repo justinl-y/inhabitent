@@ -40,6 +40,7 @@ if (!function_exists( 'red_starter_setup' ) ) :
 endif; // red_starter_setup
 add_action( 'after_setup_theme', 'red_starter_setup' );
 
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -49,6 +50,7 @@ function red_starter_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'red_starter_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'red_starter_content_width', 0 );
+
 
 /**
  * Register widget area.
@@ -68,6 +70,7 @@ function red_starter_widgets_init() {
 }
 add_action( 'widgets_init', 'red_starter_widgets_init' );
 
+
 /**
  * Filter the stylesheet_uri to output the minified CSS file.
  */
@@ -78,6 +81,7 @@ function red_starter_minified_css( $stylesheet_uri, $stylesheet_dir_uri ) {
 	return $stylesheet_uri;
 }
 add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
+
 
 /**
  * Enqueue scripts and styles.
@@ -99,28 +103,6 @@ function red_starter_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
 
-/**
- * Change backend UI login logo
- */
-function inhabitent_login_logo() { ?>
-	<style type="text/css">
-		#login h1 a, .login h1 a {
-			background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logos/inhabitent-logo-text-dark.svg);
-
-		}
-	</style>
-<?php }
-add_action( 'login_enqueue_scripts', 'inhabitent_login_logo' );
-
-function my_login_logo_url() {
-	return home_url();
-}
-add_filter( 'login_headerurl', 'my_login_logo_url' );
-
-function my_login_logo_url_title() {
-	return 'Inhabitent';
-}
-add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
 /**
  * Custom template tags for this theme.
