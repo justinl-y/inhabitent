@@ -8,7 +8,7 @@
 
 # Ignore everything in "plugins" except certain plugins. #
 plugins/*
-!plugins/inhabitent-functionality/
+!plugins/contact-information-inhabitent-widget/
 !plugins/business-hours-widget/
 !plugins/custom_post_types/
 
