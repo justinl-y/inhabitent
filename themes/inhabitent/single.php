@@ -10,8 +10,6 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<button type="button" id="close-comments">Close Comments</button>
-
 			<div class="container">
 				<p>single.php</p>
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -28,6 +26,9 @@ get_header(); ?>
 					?>
 
 				<?php endwhile; // End of the loop. ?>
+
+				<button type="button" id="close-comments">Close Comments</button>
+
 			</div><!-- .container -->
 
 		</main><!-- #main -->

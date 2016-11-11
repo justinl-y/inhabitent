@@ -10,8 +10,6 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<button type="button" id="close-comments">Close Comments</button>
-
 			<div class="container">
 				<p>single-adventure.php</p>
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -32,9 +30,5 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-	<aside>
-		<?php get_sidebar(); ?>
-	</aside>
 
 <?php get_footer(); ?>

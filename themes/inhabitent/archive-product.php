@@ -26,13 +26,13 @@ get_header(); ?>
 							the_archive_title( '<h1 class="page-title">', '</h1>' );
 						?>
 
-						<div class="product-list-style">
+						<?php  //shop stuff on front page
+							$arg = array( 'taxonomy' => 'product_type',
+							              'hide_empty' => true);
+							$terms = get_terms( $arg );
+						?>
 
-							<?php  //shop stuff on front page
-								$arg = array( 'taxonomy' => 'product_type',
-								              'hide_empty' => true);
-								$terms = get_terms( $arg );
-							?>
+						<div class="product-list-style">
 
 							<ul>
 								<?php foreach ( $terms as $term ) : ?>

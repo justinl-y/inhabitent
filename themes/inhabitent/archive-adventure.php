@@ -16,6 +16,7 @@ get_header(); ?>
 				<?php
 					$args = array(
 						'post_type' => 'adventure',
+						'orderby' => 'post_date',
 						'order' => 'ASC',
 						'posts_per_page' => 4
 					);
@@ -35,14 +36,18 @@ get_header(); ?>
 							<div class='content'>
 								<?php the_post_thumbnail( 'large' ); ?>
 								<p><?php the_title(); ?></p>
+
+								<p><a class="" href="<?php the_permalink();?>"><?php the_title(); ?></a></p>
+
 							</div>
 							<?php
 						};
 					}
 					else {
 						echo 'Oh oh, no products!';
-					}
-				?>
+					}; ?>
+
+
 
 			</div><!-- .container -->
 
