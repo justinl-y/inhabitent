@@ -3,7 +3,7 @@
  * Template Name: About Page
  *
  **/
-get_header('main'); ?>
+get_header(); ?>
 
 	<section class="about-hero">
 		<h2>About</h2>
@@ -26,4 +26,4 @@ get_header('main'); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_footer('main'); ?>
+<?php get_footer(); ?>

@@ -5,7 +5,7 @@
  * @package RED_Starter_Theme
  */
 
-get_header('main'); ?>
+get_header(); ?>
 
     <div class="container">
 
@@ -46,4 +46,4 @@ get_header('main'); ?>
 
     </div>
 
-<?php get_footer('main'); ?>
+<?php get_footer(); ?>

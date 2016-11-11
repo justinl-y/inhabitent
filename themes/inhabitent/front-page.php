@@ -5,7 +5,7 @@
  * @package RED_Starter_Theme
  */
 
-get_header('main'); ?>
+get_header(); ?>
 
     <section class="home-hero">
         <!--<a href="<?php //echo esc_url( home_url( '/' ) ); ?>" title="<?php //echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">-->
@@ -135,4 +135,4 @@ get_header('main'); ?>
         </section>
     </div>
 
-<?php get_footer('main'); ?>
+<?php get_footer(); ?>

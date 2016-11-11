@@ -5,7 +5,7 @@
  *
 **/
 
-get_header('main'); ?>
+get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -16,7 +16,8 @@ get_header('main'); ?>
 				<?php
 					$args = array(
 						'post_type' => 'adventure',
-						'order' => 'ASC'
+						'order' => 'ASC',
+						'posts_per_page' => 4
 					);
 
 					$adventures = new WP_Query( $args );
@@ -25,7 +26,7 @@ get_header('main'); ?>
 
 						//to do add page title - post type title
 
-
+						the_archive_title( '<h1 class="page-title">', '</h1>' );
 
 						while( $adventures->have_posts() ) {
 
@@ -48,6 +49,6 @@ get_header('main'); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_footer('main'); ?>
+<?php get_footer(); ?>
 
 

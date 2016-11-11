@@ -5,7 +5,7 @@
  * @package RED_Starter_Theme
  */
 
-get_header('main'); ?>
+get_header(); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
@@ -21,8 +21,6 @@ get_header('main'); ?>
 
 				<header class="page-header">
 					<div class="shop-stuff-header">
-
-						<!--<h1 class="shop-title">Shop Stuff</h1>-->
 
 						<?php
 							the_archive_title( '<h1 class="page-title">', '</h1>' );
@@ -98,4 +96,4 @@ get_header('main'); ?>
 	</main><!-- #main -->
 </div><!-- #primary -->
 
-<?php get_footer('main'); ?>
+<?php get_footer(); ?>
