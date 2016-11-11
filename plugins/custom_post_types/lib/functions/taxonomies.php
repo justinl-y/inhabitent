@@ -21,7 +21,7 @@ function register_product_type_taxonomy() {
 		'update_item'                => 'Update Product Type',
 		'view_item'                  => 'View Product Type',
 		'separate_items_with_commas' => 'Separate product types with commas',
-		'add_or_remove_items'        => 'Add or remove custom_post_types types',
+		'add_or_remove_items'        => 'Add or remove product types',
 		'choose_from_most_used'      => 'Choose from the most used',
 		'popular_items'              => 'Popular Product Types',
 		'search_items'               => 'Search Product Types',

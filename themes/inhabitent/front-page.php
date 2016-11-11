@@ -23,7 +23,7 @@ get_header('main'); ?>
 
                     foreach ($terms as $term) : ?>
 
-                        <?php echo print_r($term); ?>
+                        <?php //echo print_r($term); ?>
 
                         <?php $url = get_term_link($term->slug, 'product_type'); ?>
                         <img src="<?php echo get_template_directory_uri(); ?>/images/product-type-icons/<?php echo $term->slug; ?>.svg">

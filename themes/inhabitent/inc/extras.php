@@ -132,7 +132,7 @@ add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
 
 /*** display shop stuff ***/
 function display_custom_archive_title ($title) {
-	if (is_post_type_archive ('custom_post_types' )) {
+	if ( is_post_type_archive ('custom_post_types' ) ) {
 		$title = "Shop Stuff";
 	}
 	elseif(is_tax() ) {
