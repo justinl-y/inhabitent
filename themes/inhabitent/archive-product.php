@@ -22,7 +22,11 @@ get_header('main'); ?>
 				<header class="page-header">
 					<div class="shop-stuff-header">
 
-						<h1 class="shop-title">Shop Stuff</h1>
+						<!--<h1 class="shop-title">Shop Stuff</h1>-->
+
+						<?php
+							the_archive_title( '<h1 class="page-title">', '</h1>' );
+						?>
 
 						<div class="product-list-style">
 
@@ -64,7 +68,7 @@ get_header('main'); ?>
 									<div class="thumbnail-wrapper">
 										<a href="<?php echo get_permalink(); ?> ">
 											<?php if ( has_post_thumbnail() ) : ?>
-												<?php the_post_thumbnail( 'thumbnail' ); ?>
+												<?php the_post_thumbnail( 'large' ); ?>
 											<?php endif; ?>
 										</a>
 									</div>

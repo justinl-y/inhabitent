@@ -23,12 +23,44 @@ get_header('main'); ?>
 						?>
 					</header><!-- .page-header -->
 
-					<?php /* Start the Loop */ ?>
-					<?php while ( have_posts() ) : the_post(); ?>
 
-						<?php get_template_part( 'template-parts/content' ); ?>
+					<?php //while ( have_posts() ) : the_post(); ?>
+						<?php //get_template_part( 'template-parts/content' ); ?>
+					<?php //endwhile; ?>
 
-					<?php endwhile; ?>
+
+					<div class="archive-product-grid">
+						<?php while ( have_posts() ) : the_post(); ?>
+							<div class="single-product-block">
+
+								<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+									<header class="entry-header">
+
+										<!--images and url-->
+										<div class="thumbnail-wrapper">
+											<a href="<?php echo get_permalink(); ?> ">
+												<?php if ( has_post_thumbnail() ) : ?>
+													<?php the_post_thumbnail( 'large' ); ?>
+												<?php endif; ?>
+											</a>
+										</div>
+
+										<!--title and price-->
+										<div class="product-info">
+											<div class="product-title"><?php the_title(); ?></div>
+											<div class="product-price"><?php echo CFS()->get( 'product_price' ); ?></div>
+										</div>
+
+									</header><!-- .entry-header -->
+
+								</article><!-- #post-## -->
+
+							</div><!-- .single-product-block -->
+						<?php endwhile; ?>
+					</div><!-- .archive-product-grid -->
+
+
 
 					<?php the_posts_navigation(); ?>
 

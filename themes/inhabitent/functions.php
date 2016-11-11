@@ -92,7 +92,15 @@ function red_starter_scripts() {
 	wp_enqueue_style( 'red-starter-style', get_stylesheet_uri() );
 
 	//js
-	wp_enqueue_script( 'jquery' );
+	/***take out ***/ wp_enqueue_script( 'jquery' ); /***take out ***/
+	/***take out ***/ wp_enqueue_script( 'red_comments', get_template_directory_uri() . '/js/ajax-example.js', array( 'jquery'), false, true); /***take out ***/
+	/***take out ***/ wp_localize_script( 'red_comments', 'red_vars', array(
+
+			'rest_url' => esc_url_raw( rest_url() ),
+			'wpapi_nonce' => wp_create_nonce( 'wp_rest' ),
+			'post_id' => get_the_ID(),
+
+	) ); /***take out ***/
 
 	//other stuff
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
@@ -114,4 +122,29 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/extras.php';
 
+
+/***take out ***/
+/*function red_process_comment_ajax() {
+
+	check_ajax_referer( 'red_comment_status', 'security' );
+
+	if ( ! current_user_can( 'publish_posts' ) ) {
+		exit;
+	}
+
+	$id = $_POST['the_post_id'];
+
+	if ( isset( $id ) && is_numeric( $id ) ) {
+		$the_post = array(
+			'ID' => $id,
+			'comment_status' => 'closed' //closed - open
+		);
+
+		wp_update_post( $the_post );
+	}
+
+	exit;
+}
+add_action( 'wp_ajax_red_comment_ajax', 'red_process_comment_ajax' );
+//add_action ('wp_ajax_nopriv_')*/
 

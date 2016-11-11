@@ -8,9 +8,9 @@
 get_header('main'); ?>
 
     <section class="home-hero">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+        <!--<a href="<?php //echo esc_url( home_url( '/' ) ); ?>" title="<?php //echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">-->
             <img src="<?php echo get_template_directory_uri(); ?>/images/logos/inhabitent-logo-full.svg" alt="Image of Inhabitent logo" />
-        </a>
+        <!--</a>-->
     </section>
 
     <div class="container">
@@ -22,11 +22,14 @@ get_header('main'); ?>
                     $terms = get_terms('product_type');
 
                     foreach ($terms as $term) : ?>
+
+                        <?php echo print_r($term); ?>
+
                         <?php $url = get_term_link($term->slug, 'product_type'); ?>
                         <img src="<?php echo get_template_directory_uri(); ?>/images/product-type-icons/<?php echo $term->slug; ?>.svg">
 
                         <p><?php echo $term->description; ?></p>
-                        <p><a href="<?php echo $url ?>"><?php echo $term->name; ?></a></p>
+                        <p><a href="<?php echo $url ?>"><?php echo $term->name; ?> Stuff</a></p>
                     <?php endforeach;
                 ?>
             </section>

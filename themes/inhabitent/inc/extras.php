@@ -98,7 +98,7 @@ add_action( 'wp_enqueue_scripts', 'custom_styles_method' );
 
 /*** get specific post number for products and set sorting ***/
 function get_all_product_posts ($query) {
-	if ( is_post_type_archive( 'product' ) && !is_admin() && $query->is_main_query() ) {
+	if ( is_post_type_archive( 'custom_post_types' ) && !is_admin() && $query->is_main_query() ) {
 		$query->set('posts_per_page', '16');
 		$query->set('orderby', 'title');
 		$query->set('order', 'ASC');
@@ -128,3 +128,17 @@ function my_theme_archive_title( $title ) {
 	return $title;
 }
 add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
+
+
+/*** display shop stuff ***/
+function display_custom_archive_title ($title) {
+	if (is_post_type_archive ('custom_post_types' )) {
+		$title = "Shop Stuff";
+	}
+	elseif(is_tax() ) {
+		$title = single_term_title( '', false );
+	}
+	return $title;
+}
+
+add_filter( 'get_the_archive_title', 'display_custom_archive_title');

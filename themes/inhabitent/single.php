@@ -10,6 +10,8 @@ get_header('main'); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+			<button type="button" id="close-comments">Close Comments</button>
+
 			<div class="container">
 				<p>single.php</p>
 				<?php while ( have_posts() ) : the_post(); ?>
