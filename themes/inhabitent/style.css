@@ -835,52 +835,48 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.4rem;
   text-align: center; }
 
-.inhabitent-journal {
+.home-journal .journal-feed-container {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between; }
 
-.inhabitent-journal-block {
-  max-width: 32%;
+.journal-feed-item {
+  -ms-flex: 1 1 0;
+      flex: 1 1 0;
   border: 1px solid #e1e1e1;
-  margin-bottom: 4rem; }
-  .inhabitent-journal-block h1 {
-    color: #248A83; }
-  .inhabitent-journal-block .wp-post-image {
-    height: 250px;
-    border-bottom: 5px solid #e1e1e1; }
-  .inhabitent-journal-block a {
-    text-transform: uppercase; }
-  .inhabitent-journal-block p {
-    margin: 0;
-    font-size: .75rem; }
-  .inhabitent-journal-block .read-entry {
-    display: inline-block;
-    letter-spacing: 0.01rem;
-    font-size: 14px;
-    padding: 0.75rem 1.25rem;
-    border: 1px solid #404040;
-    text-transform: uppercase;
-    color: #404040; }
-    .inhabitent-journal-block .read-entry:hover {
-      color: #ffffff;
-      background: #248A83; }
-
-.inhabitent-journal-block-info {
-  min-height: 140px;
-  padding: 0 1rem;
-  line-height: 1;
-  letter-spacing: 2px; }
-  .inhabitent-journal-block-info a {
-    font-size: 1rem; }
-  .inhabitent-journal-block-info h1 {
-    font-size: 1.2rem; }
-    .inhabitent-journal-block-info h1:hover {
+  margin-right: 1.5rem; }
+  .journal-feed-item .journal-feed-item-info {
+    padding: 0.75rem;
+    line-height: 1; }
+    .journal-feed-item .journal-feed-item-info span {
+      font-size: .70rem; }
+    .journal-feed-item .journal-feed-item-info a {
+      text-transform: uppercase;
+      text-decoration: none; }
+    .journal-feed-item .journal-feed-item-info h3 {
+      color: #248A83;
+      margin-top: 0.25rem;
+      font-size: 1.2rem; }
+      .journal-feed-item .journal-feed-item-info h3:hover {
+        color: #404040; }
+    .journal-feed-item .journal-feed-item-info .link-button {
+      display: inline-block;
+      font-size: 0.9rem;
+      padding: 0.75rem 1.25rem;
+      border: 1px solid #404040;
+      font-family: "novecento_sans_wide", sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      text-transform: uppercase;
       color: #404040; }
-  .inhabitent-journal-block-info ul {
-    padding: 0;
-    text-align: left; }
+      .journal-feed-item .journal-feed-item-info .link-button:hover {
+        border: 0;
+        background-color: #248A83;
+        color: #ffffff; }
+
+.journal-feed-item:last-child {
+  margin-right: 0; }
 
 /** home adventures **/
 .home-adventures h2 {

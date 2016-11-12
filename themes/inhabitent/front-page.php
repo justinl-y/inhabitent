@@ -53,30 +53,28 @@ get_header(); ?>
                 <?php the_date(); ?>
                 <?php comments_number(); ?>
 
-            <?php endforeach; wp_reset_postdata(); */?>
+            <?php endforeach; wp_reset_postdata();*/
 
-            <div class="inhabitent-journal">
-                <?php
-                    $args = array( 'post_type' => 'post',
-                                   'orderby' => 'post_date',
-                                   'order' => 'DESC',
-                                   'posts_per_page' => 3 );
+                $args = array( 'post_type' => 'post',
+                               'orderby' => 'post_date',
+                               'order' => 'DESC',
+                               'posts_per_page' => 3 );
 
-                    $journal_posts = get_posts( $args );
+                $journal_posts = get_posts( $args ); ?>
 
-                foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
-                    <div class="inhabitent-journal-block">
-                        <div class="inhabitent-journal-block-image"><?php the_post_thumbnail(); ?></div>
+                <div class="journal-feed-container">
+                    <?php foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
+                        <div class="journal-feed-item">
+                            <?php the_post_thumbnail(); ?>
 
-                        <div class="inhabitent-journal-block-info">
-                            <p><?php the_date(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?></p>
-                            <a><h1><?php the_title(); ?></h1></a>
-                            <a href="<?php the_permalink(); ?>"><div class="read-entry">Read Entry</div></a>
+                            <div class="journal-feed-item-info">
+                                <span><?php the_date(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?></span>
+                                <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+                                <a href="<?php the_permalink(); ?>"><div class="link-button">Read Entry</div></a>
+                            </div>
                         </div>
-                    </div>
-                <?php endforeach; wp_reset_postdata(); //use for exiting secondary loop to return to main front-page loop?>
-
-            </div>
+                    <?php endforeach; wp_reset_postdata(); ?>
+                </div>
         </section>
 
         <section class="home-adventures">

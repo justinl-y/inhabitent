@@ -216,77 +216,69 @@ h1, h2, h3, h4, h5, h6 {
 
     text-align: center;
   }
+
+  .journal-feed-container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
-
-.inhabitent-journal {
-  display: flex;
-  justify-content: space-between;
-}
-
-.inhabitent-journal-block {
-  //display: block;
-  max-width: 32%;
+.journal-feed-item {
+  flex: 1 1 0;
   border: $border-solid-thin;
-  margin-bottom: 4rem;
+  margin-right: 1.5rem;
 
-  h1 {
-    color: $font-brand-colour-green;
-  }
+  .journal-feed-item-info {
+    padding: 0.75rem;
+    line-height: 1;
 
-  .wp-post-image {
-    height: 250px;
-    border-bottom: $border-solid-thick;
-  }
-
-  a {
-    text-transform: uppercase;
-  }
-
-  p {
-    margin: 0;
-    font-size: .75rem;
-  }
-
-  .read-entry {
-    display: inline-block;
-    letter-spacing: 0.01rem;
-    font-size: 14px;
-    padding: 0.75rem 1.25rem;
-    border: 1px solid #404040;
-    text-transform: uppercase;
-    color: $font-base-colour-black;
-
-    &:hover {
-      color: $font-base-colour-white;
-      background: $font-brand-colour-green;
+    span {
+      font-size: .70rem;
     }
-  }
-}
 
-.inhabitent-journal-block-info {
-  min-height: 140px;
-  padding: 0 1rem;
-  line-height: 1;
-  letter-spacing: 2px;
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+    }
 
-  a {
-    font-size: 1rem;
-  }
+    h3 {
+      color: $font-brand-colour-green;
 
-  h1 {
-    font-size: 1.2rem;
+      margin-top: 0.25rem;
+      font-size: 1.2rem;
 
-    &:hover {
+      &:hover {
+        color: $font-base-colour-black;
+      }
+    }
+
+    .link-button {
+      display: inline-block;
+      font-size: 0.9rem;
+
+      padding: 0.75rem 1.25rem;
+      border: 1px solid $font-base-colour-black;
+
+      font-family: $font-family-heading;
+      font-weight: normal;
+      font-style: normal;
+
+      text-transform: uppercase;
       color: $font-base-colour-black;
+
+      &:hover {
+        border: 0;
+        background-color: $font-brand-colour-green;
+        color: $font-base-colour-white;
+      }
     }
   }
-
-  ul {
-    padding: 0;
-    text-align: left;
-  }
 }
+
+.journal-feed-item:last-child {
+  margin-right: 0;
+}
+
 
 
 
