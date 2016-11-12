@@ -699,6 +699,9 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+/*** variables ***/
+/*** mixins ***/
+/*home page h2 styles*/
 /*** top level styles ***/
 * {
   box-sizing: border-box; }
@@ -776,6 +779,60 @@ h1, h2, h3, h4, h5, h6 {
       border: 0; }
       .main-navigation fieldset input:focus {
         outline: none; }
+
+/*** footer styles ***/
+.site-footer {
+  background: url("../../images/dark-wood.png") repeat;
+  color: #ffffff; }
+
+.footer-columns {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding-top: 3rem; }
+  .footer-columns h3 {
+    font-weight: bold;
+    color: #d99054; }
+
+.contact-info {
+  width: 25%; }
+  .contact-info a {
+    text-decoration: none; }
+  .contact-info a:link, .contact-info a:visited {
+    color: #ffffff; }
+  .contact-info a:hover {
+    text-decoration: underline; }
+  .contact-info i {
+    padding-right: 0.5rem; }
+
+.business-hours {
+  width: 25%; }
+  .business-hours span {
+    font-weight: bold; }
+
+.footer-logo {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 50%; }
+  .footer-logo a {
+    height: 50px;
+    width: auto; }
+
+.citation {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 100%;
+  font-family: "novecento_sans_wide", sans-serif;
+  text-transform: uppercase; }
 
 /*** home page styles ***/
 .home-hero {
@@ -1001,56 +1058,3 @@ h1, h2, h3, h4, h5, h6 {
   left: 0px;
   background: rgba(0, 0, 0, 0.7);
 }*/
-/*** footer styles ***/
-.site-footer {
-  background: url("../../images/dark-wood.png") repeat;
-  color: #ffffff; }
-
-.footer-columns {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  padding-top: 3rem; }
-  .footer-columns h3 {
-    font-weight: bold;
-    color: #d99054; }
-
-.contact-info {
-  width: 25%; }
-  .contact-info a {
-    text-decoration: none; }
-  .contact-info a:link, .contact-info a:visited {
-    color: #ffffff; }
-  .contact-info a:hover {
-    text-decoration: underline; }
-  .contact-info i {
-    padding-right: 0.5rem; }
-
-.business-hours {
-  width: 25%; }
-  .business-hours span {
-    font-weight: bold; }
-
-.footer-logo {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  width: 50%; }
-  .footer-logo a {
-    height: 50px;
-    width: auto; }
-
-.citation {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  width: 100%;
-  font-family: "novecento_sans_wide", sans-serif;
-  text-transform: uppercase; }
