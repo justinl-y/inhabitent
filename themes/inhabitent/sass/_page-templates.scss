@@ -3,14 +3,8 @@
 --------------------------------------------------------------*/
 $main-width: 1120px;
 
-$background-colour: #ffffff;
-$font-base-colour: #404040;
-$font-base-size: 16px;
-$font-base-line-height: 1.75rem;
-$font-base-spacing: 0.25rem;
-
-$font-family-base: 'merriweather', sans-serif;
-$font-family-heading: 'novecento_sans_wide', sans-serif;;
+$background-colour-base: #ffffff;
+$background-colour-brand-colour-green: #248A83;
 
 $font-brand-colour-green: #248A83;
 $font-brand-colour-purple: #2f1339;
@@ -19,7 +13,17 @@ $font-brand-colour-yellow: #f0e4d1;
 $font-brand-colour-grey-light: #a1a1a1;
 $font-brand-colour-grey-dark: #808080;
 
-$border-solid: 1px solid #e1e1e1;
+$font-family-base: 'merriweather', sans-serif;
+$font-family-heading: 'novecento_sans_wide', sans-serif;
+
+$font-base-colour-black: #404040;
+$font-base-colour-white: #ffffff;
+$font-base-size: 16px;
+$font-base-line-height: 1.75rem;
+$font-base-spacing: 0.2rem;
+
+$border-solid-thin: 1px solid #e1e1e1;
+$border-solid-thick: 5px solid #e1e1e1;
 $border-dashed: 1px dashed #c8c8c8;
 
 /*** Front page ***/
@@ -36,17 +40,25 @@ html, body {
 
 body {
   margin: 0 auto;
-  background-color: $background-colour;
+  background-color: $background-colour-base;
+
   font-family: $font-family-base;
-  font-size: $font-base-size;
+  font-weight: normal;
+  font-style: normal;
+
   line-height: $font-base-line-height;
-  color: $font-base-colour;
+  font-size: $font-base-size;
+
+  color: $font-base-colour-black;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-family-heading;
-  text-transform: uppercase;
+  font-weight: bold;
+  font-style: normal;
+
   letter-spacing: $font-base-spacing;
+  text-transform: uppercase;
 }
 
 .container {
@@ -62,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-header {
-  border-bottom: $border-solid;
+  border-bottom: $border-solid-thin;
 }
 
 .logo {
@@ -79,7 +91,6 @@ h1, h2, h3, h4, h5, h6 {
   .main-menu-navigation-container {
     display: flex;
     justify-content: flex-end;
-    //align-items: center;
     font-family: $font-family-heading;
     text-transform: uppercase;
 
@@ -126,25 +137,88 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-
-
 /*** home page styles ***/
 .home-hero {
   display: flex;
   justify-content: center;
-  //width: 100%;
   padding: 17.5rem;
   background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url('../../images/home-hero.jpg') top center no-repeat;
   background-size: cover, cover;
 }
 
+/** home shop **/
+.home-shop {
+  h2 {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2.4rem;
+
+    text-align: center;
+  }
+
+  .product-feed-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .product-feed-item {
+    text-align: center;
+
+    border: $border-solid-thin;
+    border-top: $border-solid-thick;
+
+    margin-right: 1.5rem;
+
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    &:hover {
+      border-color: $font-brand-colour-orange;
+    }
+
+    img {
+      width: 70px;
+      height: 70px;
+    }
+
+    a {
+      background-color: $background-colour-brand-colour-green;
+      font-family: $font-family-heading;
+
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 0.75rem 1.5rem;
+
+      &:hover {
+        background-color: darken($background-colour-brand-colour-green, 7.5%);
+      }
+
+      &:link, &:visited {
+        color: $font-base-colour-white;
+      }
+    }
+  }
+
+  .product-feed-item:last-child {
+    margin-right: 0;
+  }
+}
 
 
+/** home journal **/
+.home-journal {
+  h2 {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2.4rem;
+
+    text-align: center;
+  }
+}
 
 
-
-/* home journal */
 .inhabitent-journal {
   display: flex;
   justify-content: space-between;
@@ -153,7 +227,7 @@ h1, h2, h3, h4, h5, h6 {
 .inhabitent-journal-block {
   //display: block;
   max-width: 32%;
-  border: $border-solid;
+  border: $border-solid-thin;
   margin-bottom: 4rem;
 
   h1 {
@@ -162,7 +236,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .wp-post-image {
     height: 250px;
-    border-bottom: 5px solid #e1e1e1;
+    border-bottom: $border-solid-thick;
   }
 
   a {
@@ -181,10 +255,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.75rem 1.25rem;
     border: 1px solid #404040;
     text-transform: uppercase;
-    color: $font-base-colour;
+    color: $font-base-colour-black;
 
     &:hover {
-      color: white;
+      color: $font-base-colour-white;
       background: $font-brand-colour-green;
     }
   }
@@ -204,7 +278,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.2rem;
 
     &:hover {
-      color: $font-base-colour;
+      color: $font-base-colour-black;
     }
   }
 
@@ -217,7 +291,17 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-/* home adventures */
+/** home adventures **/
+.home-adventures {
+  h2 {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2.4rem;
+
+    text-align: center;
+  }
+}
+
 .home-adventures-images {
   display: flex;
   flex-direction: row;
@@ -229,7 +313,7 @@ h1, h2, h3, h4, h5, h6 {
     font-style: normal;
     font-weight: normal;
 
-    color: $background-colour;
+    color: $font-base-colour-white;
     text-decoration: none;
     text-transform: none;
   }
@@ -279,7 +363,7 @@ h1, h2, h3, h4, h5, h6 {
 
   //background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url('../../images/adventure-photos/canoe-girl.jpg') center center no-repeat;
   //background-size: cover, cover;
-  border-right: 20px solid $background-colour;
+  border-right: 20px solid $background-colour-base;
 }
 
 .home-adventures-column-right-top {
@@ -306,8 +390,8 @@ h1, h2, h3, h4, h5, h6 {
   //background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url('../../images/adventure-photos/mountain-hikers.jpg') center center no-repeat;
   //background-size: cover, cover;
 
-  border-top: 20px solid $background-colour;
-  border-right: 10px solid $background-colour;
+  border-top: 20px solid $background-colour-base;
+  border-right: 10px solid $background-colour-base;
 }
 
 .home-adventures-column-right-bottom-right {
@@ -321,8 +405,8 @@ h1, h2, h3, h4, h5, h6 {
   //background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url('../../images/adventure-photos/night-sky.jpg') center center no-repeat;
   //background-size: cover, cover;
 
-  border-top: 20px solid $background-colour;
-  border-left: 10px solid $background-colour;
+  border-top: 20px solid $background-colour-base;
+  border-left: 10px solid $background-colour-base;
 }
 
 
@@ -446,7 +530,7 @@ h1, h2, h3, h4, h5, h6 {
 /*footer styles*/
 .site-footer {
   background: url('../../images/dark-wood.png') repeat;
-  color: $background-colour;
+  color: $background-colour-base;
 }
 
 .footer-columns {
@@ -470,7 +554,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   a:link, a:visited {
-    color: $background-colour;
+    color: $font-base-colour-white;
   }
 
   a:hover {
