@@ -39,7 +39,7 @@ body {
   background-color: $background-colour;
   font-family: $font-family-base;
   font-size: $font-base-size;
-  line-height: $font-base-line-height;
+  //line-height: $font-base-line-height;
   color: $font-base-colour;
 }
 
@@ -72,26 +72,61 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-navigation {
   width: 50%;
-}
-
-.main-menu-navigation-container {
   display: flex;
-  justify-content: flex-end;
-  font-family: $font-family-heading;
-  text-transform: uppercase;
+  align-items: center;
 
-  a:link, a:visited {
-    color: $font-brand-colour-green;
+  .main-menu-navigation-container {
+    display: flex;
+    justify-content: flex-end;
+    //align-items: center;
+    font-family: $font-family-heading;
+    text-transform: uppercase;
+
+    a:link, a:visited {
+      color: $font-brand-colour-green;
+    }
+
+    a:hover {
+      color: $font-brand-colour-purple;
+    }
+
+    li {
+      padding-right: 1.5rem;
+    }
   }
 
-  a:hover {
-    color: $font-brand-colour-purple;
-  }
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding:0;
 
-  li {
-    padding-left: 1.5rem;
+    a {
+      display: inline-block;
+    }
+
+    a:link, a:visited {
+      color: $font-brand-colour-green;
+    }
+
+    a:hover {
+      color: $font-brand-colour-purple;
+    }
+
+    input {
+      font-family: $font-family-heading;
+
+      border: 0;
+
+      &:focus{
+        outline: none;
+      }
+    }
   }
 }
+
+
+
+
 
 /*** home page styles ***/
 .home-hero {
