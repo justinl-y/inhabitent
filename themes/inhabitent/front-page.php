@@ -89,15 +89,18 @@ get_header(); ?>
 
                 $adventure_posts = get_posts( $args );
                 $adventure_posts_html = [];
-
+            //class="home-adventures-link-title"
                 foreach ( $adventure_posts as $post ) : setup_postdata( $post );
 
                     //add adventure post markup to output buffer object and push into array
                     ob_start(); ?>
 
                         <?php the_post_thumbnail( 'large' ); ?>
-                        <h3><a class="home-adventures-link-title" href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
-                        <a class="home-adventures-link-button" href="<?php the_permalink();?>">Read More</a>
+
+                        <div class="adventure-feed-item-info">
+                            <a href="<?php the_permalink();?>"><h3><?php the_title(); ?></h3></a>
+                            <a href="<?php the_permalink(); ?>"><div class="link-button">Read More</div></a>
+                        </div>
 
                     <?php array_push( $adventure_posts_html, ob_get_clean() );
 
@@ -127,8 +130,7 @@ get_header(); ?>
                 </div>
             </div>
 
-            <a href="<?php echo get_post_type_archive_link('adventure'); ?>">More Adventures</a>
-
+            <p><a href="<?php echo get_post_type_archive_link('adventure'); ?>">More Adventures</a></p>
         </section>
     </div>
 
