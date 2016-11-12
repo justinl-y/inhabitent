@@ -817,60 +817,68 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   -ms-flex-direction: row;
       flex-direction: row; }
+  .home-adventures-images a:link, .home-adventures-images a:visited {
+    font-family: "merriweather", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: none; }
+  .home-adventures-images a:hover {
+    color: #f0e4d1; }
+  .home-adventures-images .home-adventures-column-left {
+    position: relative;
+    width: 50%;
+    height: 520px; }
+  .home-adventures-images .home-adventures-column-right {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 50%;
+    height: 500px; }
+  .home-adventures-images .home-adventures-column-left img {
+    height: 520px; }
+  .home-adventures-images .home-adventures-column-right img {
+    height: 250px; }
 
-.home-adventures-column-left {
-  position: relative;
-  width: 50%; }
-
-.home-adventures-column-right {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 50%; }
-
-.home-adventures-canoe-girl {
+.home-adventures-column-left-top {
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url("../../images/adventure-photos/canoe-girl.jpg") center center no-repeat;
-  background-size: cover, cover;
   border-right: 20px solid #ffffff; }
 
-.home-adventures-beach-bonfire {
+.home-adventures-column-right-top {
   position: relative;
   width: 100%;
-  padding-top: 25%;
-  padding-bottom: 25%;
-  background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url("../../images/adventure-photos/beach-bonfire.jpg") center center no-repeat;
-  background-size: cover, cover;
-  border-bottom: 20px solid #ffffff; }
+  height: 50%; }
 
-.home-adventures-mountain-hikers {
+.home-adventures-column-right-bottom-left {
   position: relative;
   width: 50%;
-  padding-top: 25%;
-  padding-bottom: 25%;
-  background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url("../../images/adventure-photos/mountain-hikers.jpg") center center no-repeat;
-  background-size: cover, cover;
+  height: 50%;
+  border-top: 20px solid #ffffff;
   border-right: 10px solid #ffffff; }
 
-.home-adventures-night-sky {
+.home-adventures-column-right-bottom-right {
   position: relative;
   width: 50%;
-  padding-top: 25%;
-  padding-bottom: 25%;
-  background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url("../../images/adventure-photos/night-sky.jpg") center center no-repeat;
-  background-size: cover, cover;
+  height: 50%;
+  border-top: 20px solid #ffffff;
   border-left: 10px solid #ffffff; }
 
-.home-adventures-image-text {
+.home-adventures-link-title {
   position: absolute;
   top: 10%;
   left: 10%;
-  transform: translate(-10%, -10%);
-  color: white; }
+  transform: translate(-10%, -10%); }
+
+.home-adventures-link-button {
+  position: absolute;
+  top: 90%;
+  left: 10%;
+  transform: translate(-10%, -90%); }
 
 .latest-adventures {
   line-height: 1.2; }

@@ -72,7 +72,7 @@ get_header(); ?>
                         <div class="inhabitent-journal-block-info">
                             <p><?php the_date(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?></p>
                             <a><h1><?php the_title(); ?></h1></a>
-                            <a href="<?php the_permalink(); ?>"><div class="read-entry">read entry</div></a>
+                            <a href="<?php the_permalink(); ?>"><div class="read-entry">Read Entry</div></a>
                         </div>
                     </div>
                 <?php endforeach; wp_reset_postdata(); //use for exiting secondary loop to return to main front-page loop?>
@@ -83,23 +83,80 @@ get_header(); ?>
         <section class="home-adventures">
             <h2>Latest Adventures</h2>
 
+            <?php
+                $args = array( 'post_type' => 'adventure',
+                               'orderby' => 'post_date',
+                               'order' => 'ASC',
+                               'posts_per_page' => 4
+                );
+
+                $adventure_posts = get_posts( $args );
+                //$adventure_post_number = 1;
+                $adventure_posts_html = [];
+
+                foreach ( $adventure_posts as $post ) : setup_postdata( $post );
+
+                    //add adventure post markup to output buffer object and push into array
+                    ob_start(); ?>
+
+                        <?php the_post_thumbnail( 'large' ); ?>
+                        <h3><a class="home-adventures-link-title" href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
+                        <a class="home-adventures-link-button" href="<?php the_permalink();?>">Read More</a>
+
+                    <?php array_push( $adventure_posts_html, ob_get_clean() ); ?>
+
+                    <?php //$adventure_post_number++;
+
+                 endforeach; wp_reset_postdata(); //echo print_r($adventure_posts_html); ?>
+
+
+                <!--<div class="<?php //echo 'home-adventures-image-' . $adventure_post_number; ?>">
+                </div>-->
+
+
             <div class="home-adventures-images">
+
                 <div class="home-adventures-column-left">
-                    <div class="home-adventures-canoe-girl">
+                    <div class="home-adventures-column-left-top">
+                        <?php echo $adventure_posts_html[0]; ?>
+                    </div>
+                </div>
+
+                <div class="home-adventures-column-right">
+                    <div class="home-adventures-column-right-top">
+                        <?php echo $adventure_posts_html[1]; ?>
+                    </div>
+
+                    <div class="home-adventures-column-right-bottom-left">
+                        <?php echo $adventure_posts_html[2]; ?>
+                    </div>
+
+                    <div class="home-adventures-column-right-bottom-right">
+                        <?php echo $adventure_posts_html[3]; ?>
+                    </div>
+                </div>
+            </div>
+
+            <a href="<?php echo get_post_type_archive_link('adventure'); ?>">More Adventures</a>
+
+            <!--<div class="home-adventures-images">
+
+                <div class="home-adventures-column-left">
+                    <div class="home-adventures-column-left-top">
                         <span class="home-adventures-image-text">Getting Back to Nature in a Canoe</span>
                     </div>
                 </div>
 
                 <div class="home-adventures-column-right">
-                    <div class="home-adventures-beach-bonfire">
+                    <div class="home-adventures-column-right-top">
                         <span class="home-adventures-image-text">A Night with Friends at the Beach</span>
                     </div>
 
-                    <div class="home-adventures-mountain-hikers">
+                    <div class="home-adventures-column-right-bottom-left">
                         <span class="home-adventures-image-text">Taking in the View at Big Mountain</span>
                     </div>
 
-                    <div class="home-adventures-night-sky">
+                    <div class="home-adventures-column-right-bottom-right">
                         <span class="home-adventures-image-text">Star-Gazing at the Night Sky</span>
                     </div>
                 </div>

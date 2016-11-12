@@ -44,7 +44,7 @@ get_header(); ?>
 						};
 					}
 					else {
-						echo 'Oh oh, no products!';
+						echo 'Oh oh, no adventures!';
 					}; ?>
 
 

@@ -103,6 +103,11 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover, cover;
 }
 
+
+
+
+
+
 /* home journal */
 .inhabitent-journal {
   display: flex;
@@ -182,79 +187,127 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
   //flex-wrap: wrap;
   //justify-content: center;
+
+  a:link, a:visited {
+    font-family: $font-family-base;
+    font-style: normal;
+    font-weight: normal;
+
+    color: $background-colour;
+    text-decoration: none;
+    text-transform: none;
+  }
+
+  a:hover {
+    color: $font-brand-colour-yellow;
+  }
+
+  .home-adventures-column-left {
+    position: relative;
+
+    width: 50%;
+    height: 520px;
+  }
+
+  .home-adventures-column-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 50%;
+    height: 500px;
+  }
+
+  .home-adventures-column-left img {
+    height: 520px;
+  }
+
+  .home-adventures-column-right img {
+    height: 250px;
+  }
+
+
+
 }
 
-.home-adventures-column-left {
-  position: relative;
-  width: 50%;
-}
 
-.home-adventures-column-right {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 50%;
-}
 
-.home-adventures-canoe-girl {
+
+
+.home-adventures-column-left-top {
   width: 100%;
   //padding-top: 50%;
   //padding-bottom: 50%;
   height: 100%;
+  //height: 500px;
 
-  background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url('../../images/adventure-photos/canoe-girl.jpg') center center no-repeat;
-  background-size: cover, cover;
+  //background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url('../../images/adventure-photos/canoe-girl.jpg') center center no-repeat;
+  //background-size: cover, cover;
   border-right: 20px solid $background-colour;
 }
 
-.home-adventures-beach-bonfire {
+.home-adventures-column-right-top {
   position: relative;
 
   width: 100%;
-  padding-top: 25%;
-  padding-bottom: 25%;
-  //height: 50%;
+  //padding-top: 25%;
+  //padding-bottom: 25%;
+  height: 50%;
 
-  background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url('../../images/adventure-photos/beach-bonfire.jpg') center center no-repeat;
-  background-size: cover, cover;
-  border-bottom: 20px solid $background-colour;
+  //background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url('../../images/adventure-photos/beach-bonfire.jpg') center center no-repeat;
+  //background-size: cover, cover;
+  //border-bottom: 20px solid $background-colour;
 }
 
-.home-adventures-mountain-hikers {
+.home-adventures-column-right-bottom-left {
   position: relative;
 
   width: 50%;
-  padding-top: 25%;
-  padding-bottom: 25%;
-  //height: 50%;
+  //padding-top: 25%;
+  //padding-bottom: 25%;
+  height: 50%;
 
-  background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url('../../images/adventure-photos/mountain-hikers.jpg') center center no-repeat;
-  background-size: cover, cover;
+  //background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url('../../images/adventure-photos/mountain-hikers.jpg') center center no-repeat;
+  //background-size: cover, cover;
+
+  border-top: 20px solid $background-colour;
   border-right: 10px solid $background-colour;
 }
 
-.home-adventures-night-sky {
+.home-adventures-column-right-bottom-right {
   position: relative;
 
   width: 50%;
-  padding-top: 25%;
-  padding-bottom: 25%;
-  //height: 50%;
+  //padding-top: 25%;
+  //padding-bottom: 25%;
+  height: 50%;
 
-  background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url('../../images/adventure-photos/night-sky.jpg') center center no-repeat;
-  background-size: cover, cover;
+  //background: linear-gradient(rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25) 100%), url('../../images/adventure-photos/night-sky.jpg') center center no-repeat;
+  //background-size: cover, cover;
+
+  border-top: 20px solid $background-colour;
   border-left: 10px solid $background-colour;
 }
 
-.home-adventures-image-text {
+
+
+.home-adventures-link-title {
   position: absolute;
   top: 10%;
   left: 10%;
   transform: translate(-10%, -10%);
 
-  color: white;
+  //color: white;
 }
 
+.home-adventures-link-button {
+  position: absolute;
+  top: 90%;
+  left: 10%;
+  transform: translate(-10%, -90%);
+
+  //color: white;
+}
 
 //Latest Adventures
 .latest-adventures {
@@ -263,7 +316,6 @@ h1, h2, h3, h4, h5, h6 {
   h2{
     text-align: center;
     text-transform: uppercase;
-
   }
 
 }
@@ -297,9 +349,7 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 .leftside-adventures {
-  background:
-          linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-          url('../../images/adventure-photos/canoe-girl.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../images/adventure-photos/canoe-girl.jpg');
   background-size: cover;
   height: 100%;
   flex: 1 0 50%;
@@ -315,9 +365,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .rightside-top-adventure {
-  background:
-          linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-          url('../../images/adventure-photos/beach-bonfire.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../images/adventure-photos/beach-bonfire.jpg');
   background-size: cover;
   flex: 1 0 100%;
   max-height: 230px;
@@ -325,9 +373,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bottom-left-rightside-adventure {
-  background:
-          linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-          url('../../images/adventure-photos/mountain-hikers.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../images/adventure-photos/mountain-hikers.jpg');
   background-size: cover;
   flex: 1 0 46%;
   //flex: 1 0 50%;
@@ -337,9 +383,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bottom-right-rightside-adventure {
-  background:
-          linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-          url('../../images/adventure-photos/night-sky.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../images/adventure-photos/night-sky.jpg');
   background-size: cover;
   flex: 1 0 50%;
   max-height: 275px;

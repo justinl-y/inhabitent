@@ -60,8 +60,6 @@ get_header(); ?>
 						<?php endwhile; ?>
 					</div><!-- .archive-product-grid -->
 
-
-
 					<?php the_posts_navigation(); ?>
 
 				<?php else : ?>
@@ -69,10 +67,6 @@ get_header(); ?>
 					<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 				<?php endif; ?>
-
-				<aside>
-					<?php get_sidebar(); ?>
-				</aside>
 
 			</div><!-- .container -->
 		</main><!-- #main -->
