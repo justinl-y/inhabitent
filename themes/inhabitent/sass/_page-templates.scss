@@ -39,7 +39,7 @@ body {
   background-color: $background-colour;
   font-family: $font-family-base;
   font-size: $font-base-size;
-  //line-height: $font-base-line-height;
+  line-height: $font-base-line-height;
   color: $font-base-colour;
 }
 
@@ -74,6 +74,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 50%;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 
   .main-menu-navigation-container {
     display: flex;
@@ -345,6 +346,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 //Latest Adventures
+/*
 .latest-adventures {
   line-height: 1.2;
 
@@ -437,21 +439,8 @@ h1, h2, h3, h4, h5, h6 {
   &:hover {
     background-color: #19625d;
   }
-}
+}*/
 
-
-
-
-
-//.home-adventures-column-left {
-  //width: 50%;
-  //height: auto;
-//}
-
-//.home-adventures-column-right {
-  //width: 50%;
-  //height: auto;
-//}
 
 
 /*footer styles*/
