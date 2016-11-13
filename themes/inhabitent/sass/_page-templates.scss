@@ -181,12 +181,51 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-
+/*** widget area styles ***/
 .widget-area {
   width: 30%;
   padding-left: 5%;
   padding-top: 3rem;
   padding-bottom: 3rem;
+
+  h2 {
+    letter-spacing: 0.10rem;
+  }
+
+  p {
+    padding: 0;
+    margin: 1rem 0 0 0;
+
+    .day-of-week {
+      font-weight: bold;
+    }
+
+    .address {
+      //padding-left: 1rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    &:link, &:visited {
+      color: $background-colour-brand-colour-green;
+    }
+  }
+
+  i {
+    margin-right: 0.5rem;
+    width: 20px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
 }
 
 
