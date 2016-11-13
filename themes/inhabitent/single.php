@@ -8,7 +8,6 @@
 get_header(); ?>
 
 	<div <?php body_class(array('container', 'inhabitent-journal')); ?>>
-
 		<div id="primary" <?php body_class('journal-content-area'); ?>>
 			<main id="main" class="site-main" role="main">
 
@@ -34,7 +33,5 @@ get_header(); ?>
 		</div><!-- #primary -->
 
 		<?php get_sidebar(); ?>
-
 	</div><!-- .container -->
-
 <?php get_footer(); ?>

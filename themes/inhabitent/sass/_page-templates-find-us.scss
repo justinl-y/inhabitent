@@ -1,0 +1,60 @@
+/*** find us ***/
+.find-us {
+  display: flex;
+  justify-content: space-between;
+
+  .find-us-content-area {
+    width: 70%;
+    border-right: 1px solid #e1e1e1;
+    padding-right: 5%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    h1 {
+      margin: 0;
+      padding: 0;
+
+      line-height: 1.25;
+
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      margin: 0;
+      padding: 0;
+
+      line-height: 1.25;
+
+      font-size: 2.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      border-radius: 0;
+
+      text-transform: uppercase;
+      font-family: $font-family-heading;
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    input[type='text'], input[type='email'], input[type='url'] {
+      border-radius: 0;
+
+      font-family: $font-family-base;
+      background: $background-colour-form-input;
+    }
+
+    textarea {
+      border-radius: 0;
+
+      font-family: $font-family-base;
+      background: $background-colour-form-input;
+    }
+
+    .required {
+      color: $font-brand-colour-orange;
+    }
+  }
+}
