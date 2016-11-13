@@ -1435,3 +1435,24 @@ h1, h2, h3, h4, h5, h6 {
         text-shadow: none;
         background-color: #1c6c66;
         border: 1px solid #1c6c66; }
+
+/*** about styles ***/
+.about-hero {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 100vh; }
+  .about-hero h1 {
+    text-align: center;
+    z-index: 1;
+    font-size: 3rem;
+    color: #ffffff; }
+
+.about-content {
+  max-width: 800px;
+  margin: 3rem auto; }
+  .about-content h2 {
+    font-size: 2.1rem; }

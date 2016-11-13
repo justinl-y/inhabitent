@@ -1,0 +1,25 @@
+/*** about styles ***/
+.about-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  h1 {
+    text-align: center;
+    z-index: 1;
+
+    font-size: 3rem;
+    color: $font-base-colour-white;
+  }
+}
+
+.about-content {
+  h2 {
+    font-size: 2.1rem;
+  }
+
+  max-width: 800px;
+  margin: 3rem auto;
+}
