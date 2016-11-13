@@ -7,9 +7,11 @@
 
 get_header(); ?>
 
+<div class="container">
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<div class="container">
+
 				<!--<p>single-product.php</p>-->
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<?php while ( have_posts() ) : the_post(); ?>
@@ -40,10 +42,10 @@ get_header(); ?>
 						</div><!-- .product-content-wrapper -->
 					<?php endwhile; // End of the loop. ?>
 				</article><!-- #post-## -->
-			</div><!-- .container -->
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+</div><!-- .container -->
 <?php get_footer(); ?>
 
 

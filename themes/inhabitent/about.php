@@ -5,24 +5,17 @@
  **/
 get_header(); ?>
 
-	<section class="about-hero">
-		<h2>About</h2>
-	</section>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<!--about.php -->
+			<header class="about-hero">
+				<h1>About</h1>
+			</header>
+
 			<section class="container">
-				<?php echo CFS()->get('our_story') ; ?>
-				<?php echo CFS()->get('our_team') ; ?>
+				<div class="about-our-story"><?php echo CFS()->get('our_story') ; ?></div>
+				<div class="about-our-team"><?php echo CFS()->get('our_team') ; ?></div>
 			</section>
-
-			<!--<div class="container">
-				<p>about.php</p>
-				<?php //while ( have_posts() ) : the_post(); ?>
-					<?php //get_template_part( 'template-parts/content', 'page' ); ?>
-				<?php //endwhile; // End of the loop. ?>
-			</div>-->
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
