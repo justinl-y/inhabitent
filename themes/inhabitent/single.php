@@ -28,7 +28,7 @@ get_header(); ?>
 
 				<?php endwhile; // End of the loop. ?>
 
-				<button type="button" id="close-comments">Close Comments</button>
+				<!--<button type="button" id="close-comments">Close Comments</button>-->
 
 			</main><!-- #main -->
 		</div><!-- #primary -->

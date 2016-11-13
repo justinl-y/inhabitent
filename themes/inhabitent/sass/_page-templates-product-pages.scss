@@ -154,7 +154,6 @@
 
       color: $font-brand-colour-orange;
       line-height: 1.25;
-      //margin-bottom: 0.5rem;
     }
 
     .entry-content {
@@ -179,31 +178,6 @@
 
     .social-buttons {
       margin-bottom: 3rem;
-
-      /*button {
-        background-color: transparent;
-        border: 1px solid $font-base-colour-black;
-        color: $font-base-colour-black;
-        border-radius: 0;
-        font-size: .9rem;
-        line-height: 1;
-        padding: .75rem 1.5rem;
-        text-decoration: none;
-        text-transform: uppercase;
-
-        box-shadow: none;
-        text-shadow: none;
-
-        &:hover {
-          background-color: $background-colour-brand-colour-green;
-          color: $font-base-colour-white;
-          border-color: $background-colour-brand-colour-green;
-        }
-
-        i {
-          padding-right: 0.25rem;
-        }
-      }*/
     }
   }
 }
