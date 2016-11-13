@@ -728,18 +728,18 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto; }
 
 /*** shop page ***/
-.shop-stuff-header {
+.page-header {
   margin-top: 3rem;
   padding-bottom: 3rem;
   border-bottom: 1px dashed #c8c8c8; }
-  .shop-stuff-header h1 {
+  .page-header h1 {
     font-size: 2.4rem;
     text-align: center; }
-  .shop-stuff-header ul {
+  .page-header ul {
     margin: 0;
     padding: 0;
     text-align: center; }
-  .shop-stuff-header li {
+  .page-header li {
     font-family: "novecento_sans_wide", sans-serif;
     font-weight: normal;
     font-style: normal;
@@ -748,13 +748,13 @@ h1, h2, h3, h4, h5, h6 {
     display: inline;
     text-transform: uppercase;
     padding-right: 3rem; }
-  .shop-stuff-header li:last-child {
+  .page-header li:last-child {
     padding: 0; }
-  .shop-stuff-header a {
+  .page-header a {
     text-decoration: none; }
-    .shop-stuff-header a:visited, .shop-stuff-header a:link {
+    .page-header a:visited, .page-header a:link {
       color: #248A83; }
-    .shop-stuff-header a:hover {
+    .page-header a:hover {
       color: #2f1339; }
 
 .archive-product-grid {
@@ -805,6 +805,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .single-product-block:nth-child(4n-8) {
   margin-right: 0; }
+
+/*** taxonomy-product_type.php ***/
+.taxonomy-description {
+  text-align: center;
+  padding-bottom: 0; }
+  .taxonomy-description p {
+    margin: 0;
+    padding: 0; }
 
 /*** header styles ***/
 .header-items {

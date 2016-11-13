@@ -80,7 +80,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*** shop page ***/
-.shop-stuff-header {
+//.shop-stuff-header {
+.page-header {
   margin-top: 3rem;
   padding-bottom: 3rem;
 
@@ -190,6 +191,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .single-product-block:nth-child(4n-8) {
   margin-right: 0;
+}
+
+/*** taxonomy-product_type.php ***/
+.taxonomy-description {
+  text-align: center;
+  padding-bottom: 0;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 

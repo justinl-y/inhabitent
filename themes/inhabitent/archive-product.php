@@ -11,12 +11,10 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 
 		<div class="container">
-
+			<!--<p>archive-product.php</p>-->
 			<?php if ( have_posts() ) : ?>
-
 				<header class="page-header">
-					<div class="shop-stuff-header">
-
+					<!--<div class="shop-stuff-header">-->
 						<?php
 							the_archive_title( '<h1 class="page-title">', '</h1>' );
 						?>
@@ -37,13 +35,11 @@ get_header(); ?>
 							<?php
 								the_archive_description( '<div e="taxonomy-description">', '</div>' );
 							?>
-						</div>
-					</div>
-
+						</div><!-- .product-list-style -->
+					<!--</div><!-- .shop-stuff-header -->
 				</header><!-- .page-header -->
 
 				<div class="archive-product-grid">
-
 					<?php
 						$args = array(
 							'post_type' => 'product',
@@ -55,9 +51,7 @@ get_header(); ?>
 						$products = new WP_Query( $args );
 
 						if( $products->have_posts() ) :
-
 							while( $products->have_posts() ) :
-
 								$products->the_post(); ?>
 
 								<div class="single-product-block">
@@ -82,19 +76,11 @@ get_header(); ?>
 									</article><!-- #post-## -->
 								</div><!-- .single-product-block -->
 							<?php endwhile;
-						else :
-							echo 'Oh oh, no products!';
 						endif; ?>
-
-
 				</div><!-- .archive-product-grid -->
-
 			<?php else : ?>
 				<?php get_template_part( 'template-parts/content', 'none' ); ?>
 			<?php endif; ?>
-
-			<p>archive-product.php</p>
-
 		</div><!-- .container -->
 
 	</main><!-- #main -->

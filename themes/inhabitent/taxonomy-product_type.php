@@ -11,11 +11,8 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<div class="container">
-
-				<p>taxonomy-product_type.php</p>
-
+				<!--<p>taxonomy-product_type.php</p>-->
 				<?php if ( have_posts() ) : ?>
-
 					<header class="page-header">
 						<?php
 							the_archive_title( '<h1 class="page-title">', '</h1>' );
@@ -23,18 +20,10 @@ get_header(); ?>
 						?>
 					</header><!-- .page-header -->
 
-
-					<?php //while ( have_posts() ) : the_post(); ?>
-					<?php //get_template_part( 'template-parts/content' ); ?>
-					<?php //endwhile; ?>
-
-
 					<div class="archive-product-grid">
 						<?php while ( have_posts() ) : the_post(); ?>
 							<div class="single-product-block">
-
 								<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
 									<header class="entry-header">
 
 										<!--images and url-->
@@ -51,21 +40,15 @@ get_header(); ?>
 											<div class="product-title"><?php the_title(); ?></div>
 											<div class="product-price"><?php echo CFS()->get( 'product_price' ); ?></div>
 										</div>
-
 									</header><!-- .entry-header -->
-
 								</article><!-- #post-## -->
-
 							</div><!-- .single-product-block -->
 						<?php endwhile; ?>
 					</div><!-- .archive-product-grid -->
 
 					<?php the_posts_navigation(); ?>
-
 				<?php else : ?>
-
 					<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
 				<?php endif; ?>
 
 			</div><!-- .container -->
