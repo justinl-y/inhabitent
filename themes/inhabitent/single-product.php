@@ -7,32 +7,42 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
-	<main id="main" class="site-main" role="main">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+			<div class="container">
+				<!--<p>single-product.php</p>-->
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-		<div class="container">
-			<p>single-product.php</p>
+						<?php //get_template_part( 'template-parts/content', 'single' ); ?>
 
-			<?php while ( have_posts() ) : the_post(); ?>
+						<div class="product-image-wrapper">
+							<?php if ( has_post_thumbnail() ) : ?>
+								<?php the_post_thumbnail( 'large' ); ?>
+							<?php endif; ?>
+						</div> <!-- .product-image-wrapper -->
 
-				<?php get_template_part( 'template-parts/content', 'single' ); ?>
+						<div class="product-content-wrapper">
+							<header class="entry-header">
+								<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+							</header><!-- .entry-header -->
 
-				<?php echo CFS()->get( 'product_price' ); ?>
+							<div class="entry-content">
+								<div class="product-price"><?php echo CFS()->get( 'product_price' ); ?></div>
+								<?php the_content(); ?>
+							</div><!-- .entry-content -->
 
-				<?php the_post_navigation(); ?>
-
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-				?>
-
-			<?php endwhile; // End of the loop. ?>
-		</div><!-- .container -->
-
-	</main><!-- #main -->
-</div><!-- #primary -->
+							<div class="social-buttons">
+								<button type="button" class="black-btn"><i class="fa fa-facebook"></i><span>Like</span></button>
+								<button type="button" class="black-btn"><i class="fa fa-twitter"></i><span>Tweet</span></button>
+								<button type="button" class="black-btn"><i class="fa fa-pinterest"></i><span>Pin</span></button>
+							</div><!-- .social-buttons -->
+						</div><!-- .product-content-wrapper -->
+					<?php endwhile; // End of the loop. ?>
+				</article><!-- #post-## -->
+			</div><!-- .container -->
+		</main><!-- #main -->
+	</div><!-- #primary -->
 
 <?php get_footer(); ?>
 
