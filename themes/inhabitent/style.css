@@ -727,6 +727,85 @@ h1, h2, h3, h4, h5, h6 {
   width: 1120px;
   margin: 0 auto; }
 
+/*** shop page ***/
+.shop-stuff-header {
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px dashed #c8c8c8; }
+  .shop-stuff-header h1 {
+    font-size: 2.4rem;
+    text-align: center; }
+  .shop-stuff-header ul {
+    margin: 0;
+    padding: 0;
+    text-align: center; }
+  .shop-stuff-header li {
+    font-family: "novecento_sans_wide", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.25rem;
+    list-style-type: none;
+    display: inline;
+    text-transform: uppercase;
+    padding-right: 3rem; }
+  .shop-stuff-header li:last-child {
+    padding: 0; }
+  .shop-stuff-header a {
+    text-decoration: none; }
+    .shop-stuff-header a:visited, .shop-stuff-header a:link {
+      color: #248A83; }
+    .shop-stuff-header a:hover {
+      color: #2f1339; }
+
+.archive-product-grid {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap; }
+
+.single-product-block {
+  border: 1px solid #e1e1e1;
+  margin-bottom: 1.5rem;
+  -ms-flex: 1;
+      flex: 1;
+  -ms-flex-preferred-size: 22.5%;
+      flex-basis: 22.5%;
+  margin-right: 1.5rem; }
+  .single-product-block article {
+    margin: 0;
+    padding: 0; }
+  .single-product-block img {
+    height: 250px;
+    width: auto;
+    object-fit: cover; }
+  .single-product-block .thumbnail-wrapper {
+    height: 250px; }
+  .single-product-block .product-info {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    padding: .75rem 1rem;
+    border-top: 5px solid #e1e1e1; }
+    .single-product-block .product-info .product-title {
+      padding-right: .25rem;
+      background-color: #ffffff; }
+      .single-product-block .product-info .product-title:before {
+        float: right;
+        width: 0;
+        white-space: nowrap;
+        content: "...................."; }
+    .single-product-block .product-info .product-price {
+      padding-left: .25rem;
+      background-color: #ffffff; }
+
+.single-product-block:nth-child(4n-8) {
+  margin-right: 0; }
+
 /*** header styles ***/
 .header-items {
   display: -ms-flexbox;

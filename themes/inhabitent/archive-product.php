@@ -11,11 +11,6 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 
 		<div class="container">
-			<p>archive-product.php</p>
-
-			<?php
-				//the_archive_title( '<h1 class="page-title">', '</h1>' ); //add filter
-			?>
 
 			<?php if ( have_posts() ) : ?>
 
@@ -33,14 +28,9 @@ get_header(); ?>
 						?>
 
 						<div class="product-list-style">
-
 							<ul>
 								<?php foreach ( $terms as $term ) : ?>
-
-									<?php //echo print_r($term); ?>
-
 									<li><a href="<?php echo get_term_link($term); ?>"><?php echo $term->name; ?></a></li>
-
 								<?php endforeach; ?>
 							</ul>
 
@@ -52,44 +42,58 @@ get_header(); ?>
 
 				</header><!-- .page-header -->
 
-
-
 				<div class="archive-product-grid">
-					<?php while ( have_posts() ) : the_post(); ?>
-						<div class="single-product-block">
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<?php
+						$args = array(
+							'post_type' => 'product',
+							'orderby' => 'post_date',
+							'order' => 'ASC',
+							'posts_per_page' => 16
+						);
 
-								<header class="entry-header">
+						$products = new WP_Query( $args );
 
-									<!--images and url-->
-									<div class="thumbnail-wrapper">
-										<a href="<?php echo get_permalink(); ?> ">
-											<?php if ( has_post_thumbnail() ) : ?>
-												<?php the_post_thumbnail( 'large' ); ?>
-											<?php endif; ?>
-										</a>
-									</div>
+						if( $products->have_posts() ) :
 
-									<!--title and price-->
-									<div class="product-info">
-										<div class="product-title"><?php the_title(); ?></div>
-										<div class="product-price"><?php echo CFS()->get( 'product_price' ); ?></div>
-									</div>
+							while( $products->have_posts() ) :
 
-								</header><!-- .entry-header -->
+								$products->the_post(); ?>
 
-							</article><!-- #post-## -->
+								<div class="single-product-block">
+									<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+										<header class="entry-header">
+											<!--images and url-->
+											<div class="thumbnail-wrapper">
+												<a href="<?php echo get_permalink(); ?> ">
+													<?php if ( has_post_thumbnail() ) : ?>
+														<?php the_post_thumbnail( 'large' ); ?>
+													<?php endif; ?>
+												</a>
+											</div>
 
-						</div><!-- .single-product-block -->
-					<?php endwhile; ?>
+											<!--title and price-->
+											<div class="product-info">
+												<div class="product-title"><?php the_title(); ?></div>
+												<div class="product-price"><?php echo CFS()->get( 'product_price' ); ?></div>
+											</div>
+
+										</header><!-- .entry-header -->
+									</article><!-- #post-## -->
+								</div><!-- .single-product-block -->
+							<?php endwhile;
+						else :
+							echo 'Oh oh, no products!';
+						endif; ?>
+
+
 				</div><!-- .archive-product-grid -->
-
-				<?php the_posts_navigation(); ?>
 
 			<?php else : ?>
 				<?php get_template_part( 'template-parts/content', 'none' ); ?>
 			<?php endif; ?>
+
+			<p>archive-product.php</p>
 
 		</div><!-- .container -->
 

@@ -36,9 +36,7 @@ get_header(); ?>
 							<div class='content'>
 								<?php the_post_thumbnail( 'large' ); ?>
 								<p><?php the_title(); ?></p>
-
 								<p><a class="" href="<?php the_permalink();?>"><?php the_title(); ?></a></p>
-
 							</div>
 							<?php
 						};
@@ -46,8 +44,6 @@ get_header(); ?>
 					else {
 						echo 'Oh oh, no adventures!';
 					}; ?>
-
-
 
 			</div><!-- .container -->
 
