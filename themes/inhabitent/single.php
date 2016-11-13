@@ -7,16 +7,17 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div <?php body_class(array('container', 'inhabitent-journal')); ?>>
 
-			<div class="container">
-				<p>single.php</p>
+		<div id="primary" <?php body_class('journal-content-area'); ?>>
+			<main id="main" class="site-main" role="main">
+
+				<!--<p>single.php</p>-->
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
-					<?php the_post_navigation(); ?>
+					<?php //the_post_navigation(); ?>
 
 					<?php
 						// If comments are open or we have at least one comment, load up the comment template.
@@ -29,13 +30,11 @@ get_header(); ?>
 
 				<button type="button" id="close-comments">Close Comments</button>
 
-			</div><!-- .container -->
+			</main><!-- #main -->
+		</div><!-- #primary -->
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-	<aside>
 		<?php get_sidebar(); ?>
-	</aside>
+
+	</div><!-- .container -->
 
 <?php get_footer(); ?>

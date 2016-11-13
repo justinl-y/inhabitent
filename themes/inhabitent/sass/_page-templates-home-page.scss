@@ -211,7 +211,7 @@
         &:hover {
           background-color: $background-colour-brand-colour-green;
           color: $font-base-colour-white;
-          border: 0;
+          border: 1px solid $background-colour-brand-colour-green;
         }
       }
     }
