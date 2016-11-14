@@ -1,4 +1,4 @@
-# Inhabitent Webside - WordPress, PHP, SASS / CSS, JQuery
+# Inhabitent Website - WordPress, PHP, SASS / CSS, JQuery
 
 This project was intended to demonstrate the use of WordPress and PHP to create a content 
 management system driven website.
