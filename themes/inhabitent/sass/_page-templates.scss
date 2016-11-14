@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
   &:hover {
     background-color: $background-colour-brand-colour-green;
     color: $font-base-colour-white;
-    border-color: $background-colour-brand-colour-green;
+    border: 1px solid $background-colour-brand-colour-green;
 
     box-shadow: none;
     text-shadow: none;

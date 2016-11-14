@@ -743,7 +743,7 @@ h1, h2, h3, h4, h5, h6 {
   .black-btn:hover {
     background-color: #248A83;
     color: #ffffff;
-    border-color: #248A83;
+    border: 1px solid #248A83;
     box-shadow: none;
     text-shadow: none; }
   .black-btn i {
@@ -1331,7 +1331,7 @@ h1, h2, h3, h4, h5, h6 {
       .inhabitent-journal .journal-content-area .entry-content a:hover {
         background-color: #248A83;
         color: #ffffff;
-        border: #248A83; }
+        border: 1px solid #248A83; }
     .inhabitent-journal .journal-content-area .cat-links, .inhabitent-journal .journal-content-area .tags-links {
       font-family: "novecento_sans_wide", sans-serif;
       text-transform: uppercase; }
