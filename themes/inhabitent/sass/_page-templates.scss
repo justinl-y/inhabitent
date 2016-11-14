@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*** button styles ***/
-.black-btn {
+.black-btn, .read-more {
   background-color: transparent;
   border: 1px solid $font-base-colour-black;
   color: $font-base-colour-black;
@@ -94,6 +94,10 @@ h1, h2, h3, h4, h5, h6 {
 
   box-shadow: none;
   text-shadow: none;
+
+  &:link, &:visited {
+    color: $font-base-colour-black;
+  }
 
   &:hover {
     background-color: $background-colour-brand-colour-green;
@@ -186,7 +190,4 @@ h1, h2, h3, h4, h5, h6 {
     list-style-type: none;
   }
 }
-
-
-
 

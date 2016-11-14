@@ -728,7 +728,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto; }
 
 /*** button styles ***/
-.black-btn {
+.black-btn, .read-more {
   background-color: transparent;
   border: 1px solid #404040;
   color: #404040;
@@ -740,13 +740,15 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   box-shadow: none;
   text-shadow: none; }
-  .black-btn:hover {
+  .black-btn:link, .black-btn:visited, .read-more:link, .read-more:visited {
+    color: #404040; }
+  .black-btn:hover, .read-more:hover {
     background-color: #248A83;
     color: #ffffff;
     border: 1px solid #248A83;
     box-shadow: none;
     text-shadow: none; }
-  .black-btn i {
+  .black-btn i, .read-more i {
     padding-right: 0.25rem; }
 
 .submit, input[type='submit'] {
@@ -1575,3 +1577,51 @@ h1, h2, h3, h4, h5, h6 {
   .adventure-container h2 {
     font-size: 1.2rem;
     font-weight: normal; }
+
+/*** search page ***/
+.search-page {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding-top: 3rem; }
+  .search-page .search-page-content-area {
+    width: 70%;
+    border-right: 1px solid #e1e1e1;
+    padding-right: 5%;
+    padding-top: 1.5rem;
+    padding-bottom: 3rem; }
+    .search-page .search-page-content-area .site-main .page-title {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #e1e1e1; }
+      .search-page .search-page-content-area .site-main .page-title h1 {
+        font-size: 2.4rem; }
+    .search-page .search-page-content-area .site-main article {
+      display: block;
+      padding-top: 0;
+      padding-bottom: 1.75rem; }
+      .search-page .search-page-content-area .site-main article h2 {
+        font-size: 2.1rem;
+        margin-bottom: 1.5rem; }
+        .search-page .search-page-content-area .site-main article h2 a {
+          text-decoration: none; }
+          .search-page .search-page-content-area .site-main article h2 a:link, .search-page .search-page-content-area .site-main article h2 a:visited {
+            color: #248A83; }
+          .search-page .search-page-content-area .site-main article h2 a:hover {
+            color: #2f1339; }
+    .search-page .search-page-content-area .site-main .search-pagination {
+      font-family: "novecento_sans_wide", sans-serif;
+      text-transform: uppercase; }
+      .search-page .search-page-content-area .site-main .search-pagination .prev, .search-page .search-page-content-area .site-main .search-pagination .next, .search-page .search-page-content-area .site-main .search-pagination .page-numbers {
+        padding: 0.25rem 0.75rem;
+        background-color: #248A83;
+        color: #ffffff;
+        border: 1px solid #248A83; }
+      .search-page .search-page-content-area .site-main .search-pagination a {
+        text-decoration: none; }
+        .search-page .search-page-content-area .site-main .search-pagination a:hover {
+          background-color: #2f1339;
+          border: 1px solid #2f1339; }
+      .search-page .search-page-content-area .site-main .search-pagination .current {
+        background-color: #808080;
+        border: 1px solid #808080; }
