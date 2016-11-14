@@ -1,6 +1,6 @@
 # Inhabitent Webside - WordPress, PHP, SASS / CSS, JQuery
 
-This project was indended to demonstrate the use of WordPress and PHP to create a content 
+This project was intended to demonstrate the use of WordPress and PHP to create a content 
 management system driven website.
 
 The focus of the project was the creation and implementation of a custom theme for WordPress 
@@ -18,14 +18,14 @@ conforming to a design specification.
 
 ##Personal Learnings
 
-This project allowed me to explore the use of WordPress to create a content managment system 
+This project allowed me to explore the use of WordPress to create a content management system 
 website with a user accessible back end UI.  Required functionality necessitated investigation
- and use of the WordPress template hiratchy for appropriate archive and other page types.
+ and use of the WordPress template hierarchy for appropriate archive and other page types.
 
 Use was made of plugins for third party functionality as well as development of custom widgets
 and post types for various data components.
 
-This project made heavy use of CSS and SASS for presentational styling. The design specificaton required particular attention to be made to flexbox for positioning.
+This project made heavy use of CSS and SASS for presentational styling. The design specification required particular attention to be made to flexbox for positioning.
 
 GULP was used to add developer functionality for task automation in the creation of minified JS and CSS files.
 
@@ -40,5 +40,5 @@ An issue with WordPress Theme check giving a warning of a slug naming violation 
 name was unable to be resolved at this time.
 
 ##To Do
-- Add custom theme screenshop.
-- Complete navigation transation.
+- Add custom theme screenshot.
+- Complete navigation transition.
