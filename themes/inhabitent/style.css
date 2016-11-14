@@ -1625,3 +1625,53 @@ h1, h2, h3, h4, h5, h6 {
       .search-page .search-page-content-area .site-main .search-pagination .current {
         background-color: #808080;
         border: 1px solid #808080; }
+
+/*** 404 ***/
+.page-not-found {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding-top: 3rem; }
+  .page-not-found .search-form {
+    border: none;
+    margin-bottom: 1.5rem; }
+    .page-not-found .search-form input {
+      text-transform: none;
+      font-family: "merriweather", sans-serif;
+      background-color: #f4f4f4; }
+    .page-not-found .search-form fieldset {
+      border: none;
+      margin: 0;
+      padding: 0; }
+    .page-not-found .search-form i {
+      display: none; }
+  .page-not-found ul, .page-not-found li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+  .page-not-found a {
+    text-decoration: none;
+    color: #248A83; }
+    .page-not-found a:link, .page-not-found a:visited {
+      color: #248A83; }
+    .page-not-found a:hover {
+      color: #2f1339; }
+  .page-not-found .page-not-found-content-area {
+    width: 70%;
+    border-right: 1px solid #e1e1e1;
+    padding-right: 5%;
+    padding-top: 1.5rem;
+    padding-bottom: 3rem; }
+    .page-not-found .page-not-found-content-area h1 {
+      margin: 0;
+      padding: 0;
+      line-height: 1.25;
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem; }
+    .page-not-found .page-not-found-content-area h2 {
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem; }
