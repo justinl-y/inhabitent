@@ -22,34 +22,6 @@ function red_starter_body_classes( $classes ) {
 add_filter( 'body_class', 'red_starter_body_classes' );
 
 
-/*function my_custom_login_logo() {
-    echo '<style type="text/css">
-         h1 a { background-image:url('.get_stylesheet_directory_uri().'/images/login.png) !important;
-         height: 120px !important; width: 410px !important; margin-left: -40px;}
-     </style>';
-}
-add_action('login_head', 'my_custom_login_logo');*/
-
-
-/* to add custom image */
-/*function my_styles_method() {
-
-	if(!is_page_template('about.php')) {
-		return;
-	}
-
-	$url = CFS()->get( 'about_background_image' );
-	$custom_css = ".about-hero {
-		background-image({$url});
-		}";
-
-	wp_add_inline_style('red-starter-theme', $custom_css);
-}
-
-
-add_action( 'wp_enqueue_scripts', 'my_styles_method' );*/
-
-
 /**
  * Change backend UI login logo
  */
