@@ -1,6 +1,6 @@
 # Inhabitent Website - WordPress, PHP, SASS / CSS, JQuery
 
-![Image of Inhabitent](wp_content/themes/inhabitent/Inhabitent-Screenshot.png?raw=true "Inhabitent")
+![Image of Inhabitent](https://github.com/justinl-y/project-04/blob/master/themes/inhabitent/Inhabitent-Screenshot.png "Inhabitent")
 
 This project was intended to demonstrate the use of WordPress and PHP to create a content 
 management system driven website.
