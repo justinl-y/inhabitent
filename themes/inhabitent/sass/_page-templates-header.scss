@@ -1,69 +1,75 @@
 /*** header styles ***/
-.header-items {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .site-header {
   border-bottom: $border-solid-thin;
-}
 
-.logo {
-  height: auto;
-  width: 55px;
-}
+  width:100%;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.6);
 
-.main-navigation {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-
-  .main-menu-navigation-container {
+  .header-items {
     display: flex;
-    justify-content: flex-end;
-    font-family: $font-family-heading;
-    text-transform: uppercase;
+    justify-content: space-between;
+    align-items: center;
 
-    a:link, a:visited {
-      color: $font-brand-colour-green;
+    .logo {
+      height: auto;
+      width: 55px;
     }
 
-    a:hover {
-      color: $font-brand-colour-purple;
-    }
+    .main-navigation {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
 
-    li {
-      padding-right: 1.5rem;
-    }
-  }
+      .main-menu-navigation-container {
+        display: flex;
+        justify-content: flex-end;
+        font-family: $font-family-heading;
+        text-transform: uppercase;
 
-  fieldset {
-    border: 0;
-    margin: 0;
-    padding:0;
+        a:link, a:visited {
+          color: $font-brand-colour-green;
+        }
 
-    a {
-      display: inline-block;
-    }
+        a:hover {
+          color: $font-brand-colour-purple;
+        }
 
-    a:link, a:visited {
-      color: $font-brand-colour-green;
-    }
+        li {
+          padding-right: 1.5rem;
+        }
+      }
 
-    a:hover {
-      color: $font-brand-colour-purple;
-    }
+      fieldset {
+        border: 0;
+        margin: 0;
+        padding:0;
 
-    input {
-      font-family: $font-family-heading;
+        a {
+          display: inline-block;
+        }
 
-      border: 0;
+        a:link, a:visited {
+          color: $font-brand-colour-green;
+        }
 
-      &:focus{
-        outline: none;
+        a:hover {
+          color: $font-brand-colour-purple;
+        }
+
+        input {
+          font-family: $font-family-heading;
+
+          border: 0;
+
+          &:focus{
+            outline: none;
+          }
+        }
       }
     }
   }
 }
+
