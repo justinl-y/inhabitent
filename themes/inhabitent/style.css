@@ -797,6 +797,76 @@ h1, h2, h3, h4, h5, h6 {
   .widget-area li {
     list-style-type: none; }
 
+/*** adventure styles ***/
+/** latest adventures **/
+.latest-adventure-content-area .page-header {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px dashed #c8c8c8; }
+  .latest-adventure-content-area .page-header h1 {
+    padding-top: 2rem;
+    font-size: 2.4rem;
+    text-align: center; }
+
+.latest-adventure-content-area .archive-adventure-grid {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap; }
+
+.latest-adventure-content-area .single-adventure-block {
+  margin-bottom: 1.5rem;
+  -ms-flex: 1;
+      flex: 1;
+  -ms-flex-preferred-size: 47.5%;
+      flex-basis: 47.5%;
+  margin-right: 1.5rem;
+  position: relative; }
+  .latest-adventure-content-area .single-adventure-block img {
+    height: 500px;
+    width: auto;
+    object-fit: cover; }
+  .latest-adventure-content-area .single-adventure-block a {
+    text-decoration: none;
+    color: #ffffff; }
+  .latest-adventure-content-area .single-adventure-block .single-adventure-item-info {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    transform: translate(10px, 0); }
+    .latest-adventure-content-area .single-adventure-block .single-adventure-item-info h3 {
+      width: 95%;
+      font-family: "merriweather", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 3rem;
+      line-height: 1.125;
+      text-transform: none; }
+      .latest-adventure-content-area .single-adventure-block .single-adventure-item-info h3:hover {
+        color: #f0e4d1; }
+    .latest-adventure-content-area .single-adventure-block .single-adventure-item-info .link-button {
+      font-family: "novecento_sans_wide", sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      line-height: 1;
+      padding: 0.75rem 1.25rem;
+      border: 1px solid #ffffff;
+      display: inline-block; }
+      .latest-adventure-content-area .single-adventure-block .single-adventure-item-info .link-button:hover {
+        background-color: #248A83;
+        color: #ffffff;
+        border: 1px solid #248A83; }
+
+.latest-adventure-content-area .single-adventure-block:nth-child(even) {
+  margin-right: 0; }
+
+/*** single adventure ***/
 /*** header styles ***/
 .site-header {
   border-bottom: 1px solid #e1e1e1;
@@ -1132,19 +1202,19 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(0, 0, 0, 0.7);
 }*/
 /*** shop page ***/
-.page-header {
+.product-content-area .page-header {
   padding-top: 3rem;
   padding-bottom: 3rem;
   border-bottom: 1px dashed #c8c8c8; }
-  .page-header h1 {
+  .product-content-area .page-header h1 {
     padding-top: 2rem;
     font-size: 2.4rem;
     text-align: center; }
-  .page-header ul {
+  .product-content-area .page-header ul {
     margin: 0;
     padding: 0;
     text-align: center; }
-  .page-header li {
+  .product-content-area .page-header li {
     font-family: "novecento_sans_wide", sans-serif;
     font-weight: normal;
     font-style: normal;
@@ -1153,13 +1223,13 @@ h1, h2, h3, h4, h5, h6 {
     display: inline;
     text-transform: uppercase;
     padding-right: 3rem; }
-  .page-header li:last-child {
+  .product-content-area .page-header li:last-child {
     padding: 0; }
-  .page-header a {
+  .product-content-area .page-header a {
     text-decoration: none; }
-    .page-header a:visited, .page-header a:link {
+    .product-content-area .page-header a:visited, .product-content-area .page-header a:link {
       color: #248A83; }
-    .page-header a:hover {
+    .product-content-area .page-header a:hover {
       color: #2f1339; }
 
 .archive-product-grid {
@@ -1474,7 +1544,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 70%;
     border-right: 1px solid #e1e1e1;
     padding-right: 5%;
-    padding-top: 3rem;
+    padding-top: 1.5rem;
     padding-bottom: 3rem; }
     .find-us .find-us-content-area h1 {
       margin: 0;

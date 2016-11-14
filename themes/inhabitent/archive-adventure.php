@@ -7,11 +7,11 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="latest-adventure-content-area">
 		<main id="main" class="site-main" role="main">
 
 			<div class="container">
-				<p>archive-adventure.php</p>
+				<!--<p>archive-adventure.php</p>-->
 
 				<?php
 					$args = array(
@@ -23,27 +23,30 @@ get_header(); ?>
 
 					$adventures = new WP_Query( $args );
 
-					if( $adventures->have_posts() ) {
+					if( $adventures->have_posts() ) : ?>
 
-						//to do add page title - post type title
+						<header class="page-header">
+							<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
+						</header><!-- .page-header -->
 
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
+						<div class="archive-adventure-grid">
 
-						while( $adventures->have_posts() ) {
-
+						<?php while( $adventures->have_posts() ) {
 							$adventures->the_post(); ?>
 
-							<div class='content'>
+							<div class='single-adventure-block'>
 								<?php the_post_thumbnail( 'large' ); ?>
-								<p><?php the_title(); ?></p>
-								<p><a class="" href="<?php the_permalink();?>"><?php the_title(); ?></a></p>
+
+								<div class="single-adventure-item-info">
+									<a href="<?php the_permalink();?>"><h3><?php the_title(); ?></h3></a>
+									<a href="<?php the_permalink(); ?>"><div class="link-button">Read More</div></a>
+								</div>
 							</div>
 							<?php
-						};
-					}
-					else {
-						echo 'Oh oh, no adventures!';
-					}; ?>
+						}; ?>
+
+						</div>
+					<?php endif; ?>
 
 			</div><!-- .container -->
 

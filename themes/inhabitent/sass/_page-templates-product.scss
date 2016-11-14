@@ -1,50 +1,53 @@
 /*** shop page ***/
 //.shop-stuff-header {
-.page-header {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 
-  border-bottom: $border-dashed;
+.product-content-area {
+  .page-header {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 
-  h1 {
-    padding-top: 2rem;
-    font-size: 2.4rem;
-    text-align: center;
-  }
+    border-bottom: $border-dashed;
 
-  ul {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-
-  li {
-    font-family: $font-family-heading;
-    font-weight: normal;
-    font-style: normal;
-
-    font-size: 1.25rem;
-
-    list-style-type: none;
-    display: inline;
-    text-transform: uppercase;
-
-    padding-right: 3rem;
-  }
-
-  li:last-child {
-    padding: 0;
-  }
-
-  a {
-    text-decoration: none;
-
-    &:visited, &:link {
-      color: $background-colour-brand-colour-green;
+    h1 {
+      padding-top: 2rem;
+      font-size: 2.4rem;
+      text-align: center;
     }
 
-    &:hover {
-      color: $font-brand-colour-purple;
+    ul {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    li {
+      font-family: $font-family-heading;
+      font-weight: normal;
+      font-style: normal;
+
+      font-size: 1.25rem;
+
+      list-style-type: none;
+      display: inline;
+      text-transform: uppercase;
+
+      padding-right: 3rem;
+    }
+
+    li:last-child {
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:visited, &:link {
+        color: $background-colour-brand-colour-green;
+      }
+
+      &:hover {
+        color: $font-brand-colour-purple;
+      }
     }
   }
 }
