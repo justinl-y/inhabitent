@@ -23,7 +23,7 @@ get_header(); ?>
                         <?php $url = get_term_link($term->slug, 'product_type'); ?>
 
                         <div class="product-feed-item">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/product-type-icons/<?php echo $term->slug; ?>.svg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/product-type-icons/<?php echo $term->slug; ?>.svg" alt="Product icon image of <?php echo $term->slug; ?>">
                             <p><?php echo $term->description; ?></p>
                             <p><a href="<?php echo $url ?>"><?php echo $term->name; ?> Stuff</a></p>
                         </div>

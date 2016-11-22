@@ -14,7 +14,6 @@ get_header(); ?>
 			<!--<p>archive-product.php</p>-->
 			<?php if ( have_posts() ) : ?>
 				<header class="page-header">
-					<!--<div class="shop-stuff-header">-->
 						<?php
 							the_archive_title( '<h1 class="page-title">', '</h1>' );
 						?>
@@ -36,7 +35,6 @@ get_header(); ?>
 								the_archive_description( '<div e="taxonomy-description">', '</div>' );
 							?>
 						</div><!-- .product-list-style -->
-					<!--</div><!-- .shop-stuff-header -->
 				</header><!-- .page-header -->
 
 				<div class="archive-product-grid">
