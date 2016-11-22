@@ -10,7 +10,7 @@
 plugins/*
 !plugins/contact-information-inhabitent-widget/
 !plugins/business-hours-widget/
-!plugins/custom_post_types/
+!plugins/inhabitent-functionality/
 
 # Ignore everything in "themes" except the active theme. #
 themes/*
