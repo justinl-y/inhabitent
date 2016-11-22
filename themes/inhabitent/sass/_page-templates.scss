@@ -152,7 +152,22 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 3rem;
 
   h2 {
+    margin-top: 2rem;
     letter-spacing: 0.10rem;
+  }
+
+  .contact-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+
+    i {
+      text-align: center;
+    }
+  }
+
+  .contact-row:last-child {
+    margin-bottom: 0;
   }
 
   p {
@@ -161,10 +176,6 @@ h1, h2, h3, h4, h5, h6 {
 
     .day-of-week {
       font-weight: bold;
-    }
-
-    .address {
-      //padding-left: 1rem;
     }
   }
 

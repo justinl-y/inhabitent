@@ -781,7 +781,18 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 3rem;
   padding-bottom: 3rem; }
   .widget-area h2 {
+    margin-top: 2rem;
     letter-spacing: 0.10rem; }
+  .widget-area .contact-row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    margin-bottom: 1rem; }
+    .widget-area .contact-row i {
+      text-align: center; }
+  .widget-area .contact-row:last-child {
+    margin-bottom: 0; }
   .widget-area p {
     padding: 0;
     margin: 1rem 0 0 0; }
@@ -1296,7 +1307,7 @@ h1, h2, h3, h4, h5, h6 {
         position: absolute;
         bottom: 0;
         right: 0;
-        padding: 1.00005rem 1.5rem;
+        padding: 1rem 1.5rem;
         background-color: #248A83;
         line-height: 0;
         font-family: "novecento_sans_wide", sans-serif;
@@ -1477,7 +1488,7 @@ h1, h2, h3, h4, h5, h6 {
         position: absolute;
         bottom: 0;
         right: 0;
-        padding: 1.00005rem 1.5rem;
+        padding: 1rem 1.5rem;
         background-color: #248A83;
         line-height: 0;
         font-family: "novecento_sans_wide", sans-serif;
