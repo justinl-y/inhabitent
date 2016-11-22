@@ -1435,6 +1435,91 @@ h1, h2, h3, h4, h5, h6 {
   .comment-form .form-submit {
     margin: 0; }
 
+/*** archive ***/
+.inhabitent-archive {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding-top: 1rem; }
+  .inhabitent-archive .archive-content-area {
+    width: 70%;
+    border-right: 1px solid #e1e1e1;
+    padding-right: 5%;
+    padding-top: 3rem;
+    padding-bottom: 3rem; }
+    .inhabitent-archive .archive-content-area article {
+      margin-bottom: 4.5rem; }
+    .inhabitent-archive .archive-content-area .entry-header {
+      position: relative;
+      line-height: 0; }
+      .inhabitent-archive .archive-content-area .entry-header img {
+        width: 100%;
+        height: auto;
+        border: 0; }
+      .inhabitent-archive .archive-content-area .entry-header .entry-title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 80%;
+        font-size: 2.1rem;
+        line-height: 1.25;
+        background-color: #248A83;
+        padding: 0.75rem 1.5rem;
+        color: #ffffff; }
+        .inhabitent-archive .archive-content-area .entry-header .entry-title a {
+          text-decoration: none; }
+          .inhabitent-archive .archive-content-area .entry-header .entry-title a:link, .inhabitent-archive .archive-content-area .entry-header .entry-title a:visited {
+            color: #ffffff; }
+          .inhabitent-archive .archive-content-area .entry-header .entry-title a:hover {
+            color: #f0e4d1; }
+      .inhabitent-archive .archive-content-area .entry-header .entry-meta {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 1.00005rem 1.5rem;
+        background-color: #248A83;
+        line-height: 0;
+        font-family: "novecento_sans_wide", sans-serif;
+        text-transform: uppercase;
+        color: #ffffff; }
+        .inhabitent-archive .archive-content-area .entry-header .entry-meta a {
+          text-decoration: none; }
+          .inhabitent-archive .archive-content-area .entry-header .entry-meta a:link, .inhabitent-archive .archive-content-area .entry-header .entry-meta a:visited {
+            color: #ffffff; }
+          .inhabitent-archive .archive-content-area .entry-header .entry-meta a:hover {
+            color: #f0e4d1; }
+    .inhabitent-archive .archive-content-area .entry-content a {
+      font-family: "novecento_sans_wide", sans-serif;
+      font-weight: normal;
+      font-style: normal;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      line-height: 1;
+      padding: 0.75rem 1.25rem;
+      border: 1px solid #404040;
+      display: inline-block; }
+      .inhabitent-archive .archive-content-area .entry-content a:link, .inhabitent-archive .archive-content-area .entry-content a:visited {
+        color: #404040; }
+      .inhabitent-archive .archive-content-area .entry-content a:hover {
+        background-color: #248A83;
+        color: #ffffff;
+        border: 1px solid #248A83; }
+    .inhabitent-archive .archive-content-area .cat-links, .inhabitent-archive .archive-content-area .tags-links {
+      font-family: "novecento_sans_wide", sans-serif;
+      text-transform: uppercase; }
+      .inhabitent-archive .archive-content-area .cat-links a, .inhabitent-archive .archive-content-area .tags-links a {
+        text-decoration: none; }
+        .inhabitent-archive .archive-content-area .cat-links a:link, .inhabitent-archive .archive-content-area .cat-links a:visited, .inhabitent-archive .archive-content-area .tags-links a:link, .inhabitent-archive .archive-content-area .tags-links a:visited {
+          color: #248A83; }
+        .inhabitent-archive .archive-content-area .cat-links a:hover, .inhabitent-archive .archive-content-area .tags-links a:hover {
+          color: #2f1339; }
+    .inhabitent-archive .archive-content-area .cat-links {
+      margin-right: 1.5rem; }
+    .inhabitent-archive .archive-content-area .social-buttons {
+      margin-top: 1.75rem; }
+
 /*** about styles ***/
 .about-hero {
   display: -ms-flexbox;

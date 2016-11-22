@@ -1,0 +1,136 @@
+/*** archive ***/
+.inhabitent-archive {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 1rem;
+
+  .archive-content-area {
+    width: 70%;
+    border-right: 1px solid #e1e1e1;
+    padding-right: 5%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    article {
+      margin-bottom: 4.5rem;
+    }
+
+    .entry-header {
+      position: relative;
+      line-height: 0;
+
+      img {
+        width: 100%;
+        height: auto;
+
+        border: 0;
+      }
+
+      .entry-title {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        max-width: 80%;
+        font-size: 2.1rem;
+        line-height: 1.25;
+        background-color: $background-colour-brand-colour-green;
+
+        padding: 0.75rem 1.5rem;
+        color: $font-base-colour-white;
+
+        a {
+          text-decoration: none;
+
+          &:link, &:visited {
+            color: $font-base-colour-white;
+          }
+
+          &:hover {
+            color: $font-brand-colour-yellow;
+          }
+        }
+      }
+
+      .entry-meta {
+        position: absolute;
+        bottom:0;
+        right:0;
+
+        padding: 1.00005rem 1.5rem;
+        background-color: $background-colour-brand-colour-green;
+        line-height: 0;
+
+        font-family: $font-family-heading;
+        text-transform: uppercase;
+        color: $font-base-colour-white;
+
+        a {
+          text-decoration: none;
+
+          &:link, &:visited {
+            color: $font-base-colour-white;
+          }
+
+          &:hover {
+            color: $font-brand-colour-yellow;
+          }
+        }
+      }
+    }
+
+    .entry-content {
+      a {
+        font-family: $font-family-heading;
+        font-weight: normal;
+        font-style: normal;
+
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+
+        line-height: 1;
+        padding: 0.75rem 1.25rem;
+        border: 1px solid $font-base-colour-black;
+
+        display: inline-block;
+
+        &:link, &:visited {
+          color: $font-base-colour-black;
+        }
+
+        &:hover {
+          background-color: $background-colour-brand-colour-green;
+          color: $font-base-colour-white;
+          border: 1px solid $background-colour-brand-colour-green;
+        }
+      }
+    }
+
+    .cat-links, .tags-links {
+      font-family: $font-family-heading;
+      text-transform: uppercase;
+
+      a {
+        text-decoration: none;
+
+        &:link, &:visited {
+          color: $font-brand-colour-green;
+        }
+
+        &:hover {
+          color: $font-brand-colour-purple;
+        }
+      }
+    }
+
+    .cat-links {
+      margin-right: 1.5rem;
+    }
+
+    .social-buttons {
+      margin-top: 1.75rem;
+    }
+  }
+}
