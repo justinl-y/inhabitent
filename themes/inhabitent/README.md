@@ -42,3 +42,11 @@ name was unable to be resolved at this time.
 ##To Do
 - Add custom theme screenshot.
 - Complete navigation transition.
+
+## Setup / Installation
+
+##### Install
+`> npm i`
+
+##### Run
+`> gulp`
